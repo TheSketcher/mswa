@@ -10,208 +10,234 @@ Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
 Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. Siehe <https://arc42.org>.
 
-# Einführung und Ziele {#section-introduction-and-goals}
+# Einführung und Ziele
 
-## Aufgabenstellung {#_aufgabenstellung}
+## Aufgabenstellung
 
-## Qualitätsziele {#_qualit_tsziele}
+## Qualitätsziele
 
-## Stakeholder {#_stakeholder}
+## Stakeholder
 
-+-----------------+-----------------+-----------------------------------+
-| Rolle           | Kontakt         | Erwartungshaltung                 |
-+=================+=================+===================================+
-| *\<Rolle-1>*    | *\<Kontakt-1>*  | *\<Erwartung-1>*                  |
-+-----------------+-----------------+-----------------------------------+
-| *\<Rolle-2>*    | *\<Kontakt-2>*  | *\<Erwartung-2>*                  |
-+-----------------+-----------------+-----------------------------------+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rolle</th>
+<th style="text-align: left;">Kontakt</th>
+<th style="text-align: left;">Erwartungshaltung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><p><em>&lt;Rolle-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Kontakt-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Erwartung-1&gt;</em></p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p><em>&lt;Rolle-2&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Kontakt-2&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Erwartung-2&gt;</em></p></td>
+</tr>
+</tbody>
+</table>
 
-# Randbedingungen {#section-architecture-constraints}
+# Randbedingungen
 
-# Kontextabgrenzung {#section-system-scope-and-context}
+# Kontextabgrenzung
 
-## Fachlicher Kontext {#_fachlicher_kontext}
+## Fachlicher Kontext
 
-**\<Diagramm und/oder Tabelle>**
+**&lt;Diagramm und/oder Tabelle>**
 
-**\<optional: Erläuterung der externen fachlichen Schnittstellen>**
+**&lt;optional: Erläuterung der externen fachlichen Schnittstellen>**
 
-## Technischer Kontext {#_technischer_kontext}
+## Technischer Kontext
 
-**\<Diagramm oder Tabelle>**
+**&lt;Diagramm oder Tabelle>**
 
-**\<optional: Erläuterung der externen technischen Schnittstellen>**
+**&lt;optional: Erläuterung der externen technischen Schnittstellen>**
 
-**\<Mapping fachliche auf technische Schnittstellen>**
+**&lt;Mapping fachliche auf technische Schnittstellen>**
 
-# Lösungsstrategie {#section-solution-strategy}
+# Lösungsstrategie
 
-# Bausteinsicht {#section-building-block-view}
+# Bausteinsicht
 
-## Whitebox Gesamtsystem {#_whitebox_gesamtsystem}
+## Whitebox Gesamtsystem
 
-***\<Übersichtsdiagramm>***
+***&lt;Übersichtsdiagramm>***
 
-Begründung
+Begründung  
+*&lt;Erläuternder Text>*
 
-:   *\<Erläuternder Text>*
+Enthaltene Bausteine  
+*&lt;Beschreibung der enthaltenen Bausteine (Blackboxen)>*
 
-Enthaltene Bausteine
+Wichtige Schnittstellen  
+*&lt;Beschreibung wichtiger Schnittstellen>*
 
-:   *\<Beschreibung der enthaltenen Bausteine (Blackboxen)>*
+### &lt;Name Blackbox 1>
 
-Wichtige Schnittstellen
+*&lt;Zweck/Verantwortung>*
 
-:   *\<Beschreibung wichtiger Schnittstellen>*
+*&lt;Schnittstelle(n)>*
 
-### \<Name Blackbox 1> {#__name_blackbox_1}
+*&lt;(Optional) Qualitäts-/Leistungsmerkmale>*
 
-*\<Zweck/Verantwortung>*
+*&lt;(Optional) Ablageort/Datei(en)>*
 
-*\<Schnittstelle(n)>*
+*&lt;(Optional) Erfüllte Anforderungen>*
 
-*\<(Optional) Qualitäts-/Leistungsmerkmale>*
+*&lt;(optional) Offene Punkte/Probleme/Risiken>*
 
-*\<(Optional) Ablageort/Datei(en)>*
+### &lt;Name Blackbox 2>
 
-*\<(Optional) Erfüllte Anforderungen>*
+*&lt;Blackbox-Template>*
 
-*\<(optional) Offene Punkte/Probleme/Risiken>*
+### &lt;Name Blackbox n>
 
-### \<Name Blackbox 2> {#__name_blackbox_2}
+*&lt;Blackbox-Template>*
 
-*\<Blackbox-Template>*
+### &lt;Name Schnittstelle 1>
 
-### \<Name Blackbox n> {#__name_blackbox_n}
+…
 
-*\<Blackbox-Template>*
+### &lt;Name Schnittstelle m>
 
-### \<Name Schnittstelle 1> {#__name_schnittstelle_1}
+## Ebene 2
 
-...
+### Whitebox *&lt;Baustein 1>*
 
-### \<Name Schnittstelle m> {#__name_schnittstelle_m}
+*&lt;Whitebox-Template>*
 
-## Ebene 2 {#_ebene_2}
+### Whitebox *&lt;Baustein 2>*
 
-### Whitebox *\<Baustein 1>* {#_whitebox_emphasis_baustein_1_emphasis}
+*&lt;Whitebox-Template>*
 
-*\<Whitebox-Template>*
+…
 
-### Whitebox *\<Baustein 2>* {#_whitebox_emphasis_baustein_2_emphasis}
+### Whitebox *&lt;Baustein m>*
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-...
+## Ebene 3
 
-### Whitebox *\<Baustein m>* {#_whitebox_emphasis_baustein_m_emphasis}
+### Whitebox &lt;\_Baustein x.1\_&gt;
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-## Ebene 3 {#_ebene_3}
+### Whitebox &lt;\_Baustein x.2\_&gt;
 
-### Whitebox \<\_Baustein x.1\_\> {#_whitebox_baustein_x_1}
+*&lt;Whitebox-Template>*
 
-*\<Whitebox-Template>*
+### Whitebox &lt;\_Baustein y.1\_&gt;
 
-### Whitebox \<\_Baustein x.2\_\> {#_whitebox_baustein_x_2}
+*&lt;Whitebox-Template>*
 
-*\<Whitebox-Template>*
+# Laufzeitsicht
 
-### Whitebox \<\_Baustein y.1\_\> {#_whitebox_baustein_y_1}
+## *&lt;Bezeichnung Laufzeitszenario 1>*
 
-*\<Whitebox-Template>*
+-   &lt;hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 
-# Laufzeitsicht {#section-runtime-view}
+-   &lt;hier Besonderheiten bei dem Zusammenspiel der Bausteine in
+    diesem Szenario erläutern>
 
-## *\<Bezeichnung Laufzeitszenario 1>* {#__emphasis_bezeichnung_laufzeitszenario_1_emphasis}
+## *&lt;Bezeichnung Laufzeitszenario 2>*
 
--   \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
+…
 
--   \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
-    Szenario erläutern>
+## *&lt;Bezeichnung Laufzeitszenario n>*
 
-## *\<Bezeichnung Laufzeitszenario 2>* {#__emphasis_bezeichnung_laufzeitszenario_2_emphasis}
+…
 
-...
+# Verteilungssicht
 
-## *\<Bezeichnung Laufzeitszenario n>* {#__emphasis_bezeichnung_laufzeitszenario_n_emphasis}
+## Infrastruktur Ebene 1
 
-...
+***&lt;Übersichtsdiagramm>***
 
-# Verteilungssicht {#section-deployment-view}
+Begründung  
+*&lt;Erläuternder Text>*
 
-## Infrastruktur Ebene 1 {#_infrastruktur_ebene_1}
+Qualitäts- und/oder Leistungsmerkmale  
+*&lt;Erläuternder Text>*
 
-***\<Übersichtsdiagramm>***
+Zuordnung von Bausteinen zu Infrastruktur  
+*&lt;Beschreibung der Zuordnung>*
 
-Begründung
+## Infrastruktur Ebene 2
 
-:   *\<Erläuternder Text>*
+### *&lt;Infrastrukturelement 1>*
 
-Qualitäts- und/oder Leistungsmerkmale
+*&lt;Diagramm + Erläuterungen>*
 
-:   *\<Erläuternder Text>*
+### *&lt;Infrastrukturelement 2>*
 
-Zuordnung von Bausteinen zu Infrastruktur
+*&lt;Diagramm + Erläuterungen>*
 
-:   *\<Beschreibung der Zuordnung>*
+…
 
-## Infrastruktur Ebene 2 {#_infrastruktur_ebene_2}
+### *&lt;Infrastrukturelement n>*
 
-### *\<Infrastrukturelement 1>* {#__emphasis_infrastrukturelement_1_emphasis}
+*&lt;Diagramm + Erläuterungen>*
 
-*\<Diagramm + Erläuterungen>*
+# Querschnittliche Konzepte
 
-### *\<Infrastrukturelement 2>* {#__emphasis_infrastrukturelement_2_emphasis}
+## *&lt;Konzept 1>*
 
-*\<Diagramm + Erläuterungen>*
+*&lt;Erklärung>*
 
-...
+## *&lt;Konzept 2>*
 
-### *\<Infrastrukturelement n>* {#__emphasis_infrastrukturelement_n_emphasis}
+*&lt;Erklärung>*
 
-*\<Diagramm + Erläuterungen>*
+…
 
-# Querschnittliche Konzepte {#section-concepts}
+## *&lt;Konzept n>*
 
-## *\<Konzept 1>* {#__emphasis_konzept_1_emphasis}
+*&lt;Erklärung>*
 
-*\<Erklärung>*
+# Architekturentscheidungen
 
-## *\<Konzept 2>* {#__emphasis_konzept_2_emphasis}
+# Qualitätsanforderungen
 
-*\<Erklärung>*
-
-...
-
-## *\<Konzept n>* {#__emphasis_konzept_n_emphasis}
-
-*\<Erklärung>*
-
-# Architekturentscheidungen {#section-design-decisions}
-
-# Qualitätsanforderungen {#section-quality-scenarios}
-
-::: formalpara-title
 **Weiterführende Informationen**
-:::
 
 Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in
 der online-Dokumentation (auf Englisch!).
 
-## Qualitätsbaum {#_qualit_tsbaum}
+## Qualitätsbaum
 
-## Qualitätsszenarien {#_qualit_tsszenarien}
+## Qualitätsszenarien
 
-# Risiken und technische Schulden {#section-technical-risks}
+# Risiken und technische Schulden
 
-# Glossar {#section-glossary}
+# Glossar
 
-+-----------------------+-----------------------------------------------+
-| Begriff               | Definition                                    |
-+=======================+===============================================+
-| *\<Begriff-1>*        | *\<Definition-1>*                             |
-+-----------------------+-----------------------------------------------+
-| *\<Begriff-2*         | *\<Definition-2>*                             |
-+-----------------------+-----------------------------------------------+
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><p><em>&lt;Begriff-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Definition-1&gt;</em></p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p><em>&lt;Begriff-2</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Definition-2&gt;</em></p></td>
+</tr>
+</tbody>
+</table>

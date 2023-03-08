@@ -10,13 +10,11 @@ Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
 Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. Siehe <https://arc42.org>.
 
-::: note
 Diese Version des Templates enthält Hilfen und Erläuterungen. Sie dient
 der Einarbeitung in arc42 sowie dem Verständnis der Konzepte. Für die
 Dokumentation eigener System verwenden Sie besser die *plain* Version.
-:::
 
-# Einführung und Ziele {#section-introduction-and-goals}
+# Einführung und Ziele
 
 Beschreibt die wesentlichen Anforderungen und treibenden Kräfte, die bei
 der Umsetzung der Softwarearchitektur und Entwicklung des Systems
@@ -34,28 +32,22 @@ Dazu gehören:
 
 -   relevante Stakeholder und deren Erwartungshaltung.
 
-## Aufgabenstellung {#_aufgabenstellung}
+## Aufgabenstellung
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Kurzbeschreibung der fachlichen Aufgabenstellung, treibenden Kräfte,
 Extrakt (oder Abstract) der Anforderungen. Verweis auf (hoffentlich
 vorliegende) Anforderungsdokumente (mit Versionsbezeichnungen und
 Ablageorten).
 
-::: formalpara-title
 **Motivation**
-:::
 
 Aus Sicht der späteren Nutzung ist die Unterstützung einer fachlichen
 Aufgabe oder Verbesserung der Qualität der eigentliche Beweggrund, ein
 neues System zu schaffen oder ein bestehendes zu modifizieren.
 
-::: formalpara-title
 **Form**
-:::
 
 Kurze textuelle Beschreibung, eventuell in tabellarischer Use-Case Form.
 Sofern vorhanden, sollte die Aufgabenstellung Verweise auf die
@@ -67,11 +59,9 @@ und Redundanzfreiheit gegeneinander ab.
 Siehe [Anforderungen und Ziele](https://docs.arc42.org/section-1/) in
 der online-Dokumentation (auf Englisch!).
 
-## Qualitätsziele {#_qualit_tsziele}
+## Qualitätsziele
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Die Top-3 bis Top-5 der Qualitätsanforderungen für die Architektur,
 deren Erfüllung oder Einhaltung den maßgeblichen Stakeholdern besonders
@@ -85,29 +75,23 @@ Standard):
 ![Kategorien von
 Qualitätsanforderungen](images/01_2_iso-25010-topics-DE.drawio.png)
 
-::: formalpara-title
 **Motivation**
-:::
 
 Weil Qualitätsziele grundlegende Architekturentscheidungen oft
 maßgeblich beeinflussen, sollten Sie die für Ihre Stakeholder relevanten
 Qualitätsziele kennen, möglichst konkret und operationalisierbar.
 
-::: formalpara-title
 **Form**
-:::
 
 Tabellarische Darstellung der Qualitätsziele mit möglichst konkreten
 Szenarien, geordnet nach Prioritäten.
 
-## Stakeholder {#_stakeholder}
+## Stakeholder
 
-::: formalpara-title
 **Inhalt**
-:::
 
-Expliziter Überblick über die Stakeholder des Systems -- über alle
-Personen, Rollen oder Organisationen --, die
+Expliziter Überblick über die Stakeholder des Systems – über alle
+Personen, Rollen oder Organisationen –, die
 
 -   die Architektur kennen sollten oder
 
@@ -120,53 +104,62 @@ Personen, Rollen oder Organisationen --, die
 
 -   Entscheidungen über das System und dessen Entwicklung treffen.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Sie sollten die Projektbeteiligten und -betroffenen kennen, sonst
 erleben Sie später im Entwicklungsprozess Überraschungen. Diese
 Stakeholder bestimmen unter anderem Umfang und Detaillierungsgrad der
 von Ihnen zu leistenden Arbeit und Ergebnisse.
 
-::: formalpara-title
 **Form**
-:::
 
 Tabelle mit Rollen- oder Personennamen, sowie deren Erwartungshaltung
 bezüglich der Architektur und deren Dokumentation.
 
-+-----------------+-----------------+-----------------------------------+
-| Rolle           | Kontakt         | Erwartungshaltung                 |
-+=================+=================+===================================+
-| *\<Rolle-1>*    | *\<Kontakt-1>*  | *\<Erwartung-1>*                  |
-+-----------------+-----------------+-----------------------------------+
-| *\<Rolle-2>*    | *\<Kontakt-2>*  | *\<Erwartung-2>*                  |
-+-----------------+-----------------+-----------------------------------+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Rolle</th>
+<th style="text-align: left;">Kontakt</th>
+<th style="text-align: left;">Erwartungshaltung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><p><em>&lt;Rolle-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Kontakt-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Erwartung-1&gt;</em></p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p><em>&lt;Rolle-2&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Kontakt-2&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Erwartung-2&gt;</em></p></td>
+</tr>
+</tbody>
+</table>
 
-# Randbedingungen {#section-architecture-constraints}
+# Randbedingungen
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Randbedingungen und Vorgaben, die ihre Freiheiten bezüglich Entwurf,
 Implementierung oder Ihres Entwicklungsprozesses einschränken. Diese
 Randbedingungen gelten manchmal organisations- oder firmenweit über die
 Grenzen einzelner Systeme hinweg.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Für eine tragfähige Architektur sollten Sie genau wissen, wo Ihre
 Freiheitsgrade bezüglich der Entwurfsentscheidungen liegen und wo Sie
 Randbedingungen beachten müssen. Sie können Randbedingungen vielleicht
 noch verhandeln, zunächst sind sie aber da.
 
-::: formalpara-title
 **Form**
-:::
 
 Einfache Tabellen der Randbedingungen mit Erläuterungen. Bei Bedarf
 unterscheiden Sie technische, organisatorische und politische
@@ -177,11 +170,9 @@ Namenskonvention).
 Siehe [Randbedingungen](https://docs.arc42.org/section-2/) in der
 online-Dokumentation (auf Englisch!).
 
-# Kontextabgrenzung {#section-system-scope-and-context}
+# Kontextabgrenzung
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Die Kontextabgrenzung grenzt das System gegen alle Kommunikationspartner
 (Nachbarsysteme und Benutzerrollen) ab. Sie legt damit die externen
@@ -192,17 +183,13 @@ Verantwortung übernehmen die Nachbarsysteme?
 Differenzieren Sie fachlichen (Ein- und Ausgaben) und technischen
 Kontext (Kanäle, Protokolle, Hardware), falls nötig.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Die fachlichen und technischen Schnittstellen zur Kommunikation gehören
 zu den kritischsten Aspekten eines Systems. Stellen Sie sicher, dass Sie
 diese komplett verstanden haben.
 
-::: formalpara-title
 **Form**
-:::
 
 Verschiedene Optionen:
 
@@ -213,27 +200,21 @@ Verschiedene Optionen:
 Siehe [Kontextabgrenzung](https://docs.arc42.org/section-3/) in der
 online-Dokumentation (auf Englisch!).
 
-## Fachlicher Kontext {#_fachlicher_kontext}
+## Fachlicher Kontext
 
-::: formalpara-title
 **Inhalt**
-:::
 
-Festlegung **aller** Kommunikationsbeziehungen (Nutzer, IT-Systeme, ...)
+Festlegung **aller** Kommunikationsbeziehungen (Nutzer, IT-Systeme, …)
 mit Erklärung der fachlichen Ein- und Ausgabedaten oder Schnittstellen.
 Zusätzlich (bei Bedarf) fachliche Datenformate oder Protokolle der
 Kommunikation mit den Nachbarsystemen.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Alle Beteiligten müssen verstehen, welche fachlichen Informationen mit
 der Umwelt ausgetauscht werden.
 
-::: formalpara-title
 **Form**
-:::
 
 Alle Diagrammarten, die das System als Blackbox darstellen und die
 fachlichen Schnittstellen zu den Nachbarsystemen beschreiben.
@@ -242,23 +223,19 @@ Alternativ oder ergänzend können Sie eine Tabelle verwenden. Der Titel
 gibt den Namen Ihres Systems wieder; die drei Spalten sind:
 Kommunikationsbeziehung, Eingabe, Ausgabe.
 
-**\<Diagramm und/oder Tabelle>**
+**&lt;Diagramm und/oder Tabelle>**
 
-**\<optional: Erläuterung der externen fachlichen Schnittstellen>**
+**&lt;optional: Erläuterung der externen fachlichen Schnittstellen>**
 
-## Technischer Kontext {#_technischer_kontext}
+## Technischer Kontext
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Technische Schnittstellen (Kanäle, Übertragungsmedien) zwischen dem
 System und seiner Umwelt. Zusätzlich eine Erklärung (*mapping*), welche
 fachlichen Ein- und Ausgaben über welche technischen Kanäle fließen.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Viele Stakeholder treffen Architekturentscheidungen auf Basis der
 technischen Schnittstellen des Systems zu seinem Kontext.
@@ -266,25 +243,21 @@ technischen Schnittstellen des Systems zu seinem Kontext.
 Insbesondere bei der Entwicklung von Infrastruktur oder Hardware sind
 diese technischen Schnittstellen durchaus entscheidend.
 
-::: formalpara-title
 **Form**
-:::
 
 Beispielsweise UML Deployment-Diagramme mit den Kanälen zu
 Nachbarsystemen, begleitet von einer Tabelle, die Kanäle auf
 Ein-/Ausgaben abbildet.
 
-**\<Diagramm oder Tabelle>**
+**&lt;Diagramm oder Tabelle>**
 
-**\<optional: Erläuterung der externen technischen Schnittstellen>**
+**&lt;optional: Erläuterung der externen technischen Schnittstellen>**
 
-**\<Mapping fachliche auf technische Schnittstellen>**
+**&lt;Mapping fachliche auf technische Schnittstellen>**
 
-# Lösungsstrategie {#section-solution-strategy}
+# Lösungsstrategie
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Kurzer Überblick über die grundlegenden Entscheidungen und
 Lösungsansätze, die Entwurf und Implementierung des Systems prägen.
@@ -303,17 +276,13 @@ Hierzu gehören:
     bestimmte Entwicklungsprozesse oder Delegation bestimmter Aufgaben
     an andere Stakeholder.
 
-::: formalpara-title
 **Motivation**
-:::
 
-Diese wichtigen Entscheidungen bilden wesentliche „Eckpfeiler" der
+Diese wichtigen Entscheidungen bilden wesentliche „Eckpfeiler“ der
 Architektur. Von ihnen hängen viele weitere Entscheidungen oder
 Implementierungsregeln ab.
 
-::: formalpara-title
 **Form**
-:::
 
 Fassen Sie die zentralen Entwurfsentscheidungen **kurz** zusammen.
 Motivieren Sie, ausgehend von Aufgabenstellung, Qualitätszielen und
@@ -324,24 +293,20 @@ auf weitere Ausführungen in Folgeabschnitten.
 Siehe [Lösungsstrategie](https://docs.arc42.org/section-4/) in der
 online-Dokumentation (auf Englisch!).
 
-# Bausteinsicht {#section-building-block-view}
+# Bausteinsicht
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Die Bausteinsicht zeigt die statische Zerlegung des Systems in Bausteine
 (Module, Komponenten, Subsysteme, Klassen, Schnittstellen, Pakete,
 Bibliotheken, Frameworks, Schichten, Partitionen, Tiers, Funktionen,
-Makros, Operationen, Datenstrukturen, ...) sowie deren Abhängigkeiten
-(Beziehungen, Assoziationen, ...)
+Makros, Operationen, Datenstrukturen, …) sowie deren Abhängigkeiten
+(Beziehungen, Assoziationen, …)
 
 Diese Sicht sollte in jeder Architekturdokumentation vorhanden sein. In
 der Analogie zum Hausbau bildet die Bausteinsicht den *Grundrissplan*.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Behalten Sie den Überblick über den Quellcode, indem Sie die statische
 Struktur des Systems durch Abstraktion verständlich machen.
@@ -349,9 +314,7 @@ Struktur des Systems durch Abstraktion verständlich machen.
 Damit ermöglichen Sie Kommunikation auf abstrakterer Ebene, ohne zu
 viele Implementierungsdetails offenlegen zu müssen.
 
-::: formalpara-title
 **Form**
-:::
 
 Die Bausteinsicht ist eine hierarchische Sammlung von Blackboxen und
 Whiteboxen (siehe Abbildung unten) und deren Beschreibungen.
@@ -371,7 +334,7 @@ Bausteine.
 Siehe [Bausteinsicht](https://docs.arc42.org/section-5/) in der
 online-Dokumentation (auf Englisch!).
 
-## Whitebox Gesamtsystem {#_whitebox_gesamtsystem}
+## Whitebox Gesamtsystem
 
 An dieser Stelle beschreiben Sie die Zerlegung des Gesamtsystems anhand
 des nachfolgenden Whitebox-Templates. Dieses enthält:
@@ -404,41 +367,53 @@ des nachfolgenden Whitebox-Templates. Dieses enthält:
     besten Fall kommen Sie mit Beispielen oder einfachen Signaturen
     zurecht.
 
-***\<Übersichtsdiagramm>***
+***&lt;Übersichtsdiagramm>***
 
-Begründung
+Begründung  
+*&lt;Erläuternder Text>*
 
-:   *\<Erläuternder Text>*
+Enthaltene Bausteine  
+*&lt;Beschreibung der enthaltenen Bausteine (Blackboxen)>*
 
-Enthaltene Bausteine
-
-:   *\<Beschreibung der enthaltenen Bausteine (Blackboxen)>*
-
-Wichtige Schnittstellen
-
-:   *\<Beschreibung wichtiger Schnittstellen>*
+Wichtige Schnittstellen  
+*&lt;Beschreibung wichtiger Schnittstellen>*
 
 Hier folgen jetzt Erläuterungen zu Blackboxen der Ebene 1.
 
 Falls Sie die tabellarische Beschreibung wählen, so werden Blackboxen
 darin nur mit Name und Verantwortung nach folgendem Muster beschrieben:
 
-+-----------------------+-----------------------------------------------+
-| **Name**              | **Verantwortung**                             |
-+=======================+===============================================+
-| *\<Blackbox 1>*       |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
-| *\<Blackbox 2>*       |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Name</strong></th>
+<th style="text-align: left;"><strong>Verantwortung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><p><em>&lt;Blackbox 1&gt;</em></p></td>
+<td style="text-align: left;"><p> <em>&lt;Text&gt;</em></p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p><em>&lt;Blackbox 2&gt;</em></p></td>
+<td style="text-align: left;"><p> <em>&lt;Text&gt;</em></p></td>
+</tr>
+</tbody>
+</table>
 
 Falls Sie die ausführliche Liste von Blackbox-Beschreibungen wählen,
 beschreiben Sie jede wichtige Blackbox in einem eigenen
 Blackbox-Template. Dessen Überschrift ist jeweils der Namen dieser
 Blackbox.
 
-### \<Name Blackbox 1> {#__name_blackbox_1}
+### &lt;Name Blackbox 1>
 
-Beschreiben Sie die \<Blackbox 1> anhand des folgenden
+Beschreiben Sie die &lt;Blackbox 1> anhand des folgenden
 Blackbox-Templates:
 
 -   Zweck/Verantwortung
@@ -457,33 +432,33 @@ Blackbox-Templates:
 
 -   (Optional) Offene Punkte/Probleme/Risiken
 
-*\<Zweck/Verantwortung>*
+*&lt;Zweck/Verantwortung>*
 
-*\<Schnittstelle(n)>*
+*&lt;Schnittstelle(n)>*
 
-*\<(Optional) Qualitäts-/Leistungsmerkmale>*
+*&lt;(Optional) Qualitäts-/Leistungsmerkmale>*
 
-*\<(Optional) Ablageort/Datei(en)>*
+*&lt;(Optional) Ablageort/Datei(en)>*
 
-*\<(Optional) Erfüllte Anforderungen>*
+*&lt;(Optional) Erfüllte Anforderungen>*
 
-*\<(optional) Offene Punkte/Probleme/Risiken>*
+*&lt;(optional) Offene Punkte/Probleme/Risiken>*
 
-### \<Name Blackbox 2> {#__name_blackbox_2}
+### &lt;Name Blackbox 2>
 
-*\<Blackbox-Template>*
+*&lt;Blackbox-Template>*
 
-### \<Name Blackbox n> {#__name_blackbox_n}
+### &lt;Name Blackbox n>
 
-*\<Blackbox-Template>*
+*&lt;Blackbox-Template>*
 
-### \<Name Schnittstelle 1> {#__name_schnittstelle_1}
+### &lt;Name Schnittstelle 1>
 
-...
+…
 
-### \<Name Schnittstelle m> {#__name_schnittstelle_m}
+### &lt;Name Schnittstelle m>
 
-## Ebene 2 {#_ebene_2}
+## Ebene 2
 
 Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 1 als
 Whitebox.
@@ -494,23 +469,23 @@ Skizzieren Sie wichtige, überraschende, riskante, komplexe oder
 besonders volatile Bausteine. Normale, einfache oder standardisierte
 Teile sollten Sie weglassen.
 
-### Whitebox *\<Baustein 1>* {#_whitebox_emphasis_baustein_1_emphasis}
+### Whitebox *&lt;Baustein 1>*
 
-...zeigt das Innenleben von *Baustein 1*.
+…zeigt das Innenleben von *Baustein 1*.
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-### Whitebox *\<Baustein 2>* {#_whitebox_emphasis_baustein_2_emphasis}
+### Whitebox *&lt;Baustein 2>*
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-...
+…
 
-### Whitebox *\<Baustein m>* {#_whitebox_emphasis_baustein_m_emphasis}
+### Whitebox *&lt;Baustein m>*
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-## Ebene 3 {#_ebene_3}
+## Ebene 3
 
 Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 2 als
 Whitebox.
@@ -518,25 +493,23 @@ Whitebox.
 Bei tieferen Gliederungen der Architektur kopieren Sie diesen Teil von
 arc42 für die weiteren Ebenen.
 
-### Whitebox \<\_Baustein x.1\_\> {#_whitebox_baustein_x_1}
+### Whitebox &lt;\_Baustein x.1\_&gt;
 
-...zeigt das Innenleben von *Baustein x.1*.
+…zeigt das Innenleben von *Baustein x.1*.
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-### Whitebox \<\_Baustein x.2\_\> {#_whitebox_baustein_x_2}
+### Whitebox &lt;\_Baustein x.2\_&gt;
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-### Whitebox \<\_Baustein y.1\_\> {#_whitebox_baustein_y_1}
+### Whitebox &lt;\_Baustein y.1\_&gt;
 
-*\<Whitebox-Template>*
+*&lt;Whitebox-Template>*
 
-# Laufzeitsicht {#section-runtime-view}
+# Laufzeitsicht
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Diese Sicht erklärt konkrete Abläufe und Beziehungen zwischen Bausteinen
 in Form von Szenarien aus den folgenden Bereichen:
@@ -556,9 +529,7 @@ Abläufe) des Systems ist deren Architekturrelevanz. Es geht nicht darum,
 möglichst viele Abläufe darzustellen, sondern eine angemessene Auswahl
 zu dokumentieren.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Sie sollten verstehen, wie (Instanzen von) Bausteine(n) Ihres Systems
 ihre jeweiligen Aufgaben erfüllen und zur Laufzeit miteinander
@@ -569,9 +540,7 @@ verständlichere Kommunikation mit denjenigen Stakeholdern, die die
 statischen Modelle (z.B. Bausteinsicht, Verteilungssicht) weniger
 verständlich finden.
 
-::: formalpara-title
 **Form**
-:::
 
 Für die Beschreibung von Szenarien gibt es zahlreiche
 Ausdrucksmöglichkeiten. Nutzen Sie beispielsweise:
@@ -587,31 +556,29 @@ Ausdrucksmöglichkeiten. Nutzen Sie beispielsweise:
 
 -   Zustandsautomaten
 
--   ...
+-   …
 
 Siehe [Laufzeitsicht](https://docs.arc42.org/section-6/) in der
 online-Dokumentation (auf Englisch!).
 
-## *\<Bezeichnung Laufzeitszenario 1>* {#__emphasis_bezeichnung_laufzeitszenario_1_emphasis}
+## *&lt;Bezeichnung Laufzeitszenario 1>*
 
--   \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
+-   &lt;hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 
--   \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
-    Szenario erläutern>
+-   &lt;hier Besonderheiten bei dem Zusammenspiel der Bausteine in
+    diesem Szenario erläutern>
 
-## *\<Bezeichnung Laufzeitszenario 2>* {#__emphasis_bezeichnung_laufzeitszenario_2_emphasis}
+## *&lt;Bezeichnung Laufzeitszenario 2>*
 
-...
+…
 
-## *\<Bezeichnung Laufzeitszenario n>* {#__emphasis_bezeichnung_laufzeitszenario_n_emphasis}
+## *&lt;Bezeichnung Laufzeitszenario n>*
 
-...
+…
 
-# Verteilungssicht {#section-deployment-view}
+# Verteilungssicht
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Die Verteilungssicht beschreibt:
 
@@ -635,17 +602,13 @@ Softwareverteilung relevant sind. Insbesondere bei der
 Hardwareentwicklung kann es notwendig sein, die Infrastruktur mit
 beliebigen Details zu beschreiben.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Software läuft nicht ohne Infrastruktur. Diese zugrundeliegende
 Infrastruktur beeinflusst Ihr System und/oder querschnittliche
 Lösungskonzepte, daher müssen Sie diese Infrastruktur kennen.
 
-::: formalpara-title
 **Form**
-:::
 
 Das oberste Verteilungsdiagramm könnte bereits in Ihrem technischen
 Kontext enthalten sein, mit Ihrer Infrastruktur als EINE Blackbox. Jetzt
@@ -664,7 +627,7 @@ hinein:
 Siehe [Verteilungssicht](https://docs.arc42.org/section-7/) in der
 online-Dokumentation (auf Englisch!).
 
-## Infrastruktur Ebene 1 {#_infrastruktur_ebene_1}
+## Infrastruktur Ebene 1
 
 An dieser Stelle beschreiben Sie (als Kombination von Diagrammen mit
 Tabellen oder Texten):
@@ -682,46 +645,41 @@ Tabellen oder Texten):
 Für mehrere Umgebungen oder alternative Deployments kopieren Sie diesen
 Teil von arc42 für alle wichtigen Umgebungen/Varianten.
 
-***\<Übersichtsdiagramm>***
+***&lt;Übersichtsdiagramm>***
 
-Begründung
+Begründung  
+*&lt;Erläuternder Text>*
 
-:   *\<Erläuternder Text>*
+Qualitäts- und/oder Leistungsmerkmale  
+*&lt;Erläuternder Text>*
 
-Qualitäts- und/oder Leistungsmerkmale
+Zuordnung von Bausteinen zu Infrastruktur  
+*&lt;Beschreibung der Zuordnung>*
 
-:   *\<Erläuternder Text>*
-
-Zuordnung von Bausteinen zu Infrastruktur
-
-:   *\<Beschreibung der Zuordnung>*
-
-## Infrastruktur Ebene 2 {#_infrastruktur_ebene_2}
+## Infrastruktur Ebene 2
 
 An dieser Stelle können Sie den inneren Aufbau (einiger)
 Infrastrukturelemente aus Ebene 1 beschreiben.
 
 Für jedes Infrastrukturelement kopieren Sie die Struktur aus Ebene 1.
 
-### *\<Infrastrukturelement 1>* {#__emphasis_infrastrukturelement_1_emphasis}
+### *&lt;Infrastrukturelement 1>*
 
-*\<Diagramm + Erläuterungen>*
+*&lt;Diagramm + Erläuterungen>*
 
-### *\<Infrastrukturelement 2>* {#__emphasis_infrastrukturelement_2_emphasis}
+### *&lt;Infrastrukturelement 2>*
 
-*\<Diagramm + Erläuterungen>*
+*&lt;Diagramm + Erläuterungen>*
 
-...
+…
 
-### *\<Infrastrukturelement n>* {#__emphasis_infrastrukturelement_n_emphasis}
+### *&lt;Infrastrukturelement n>*
 
-*\<Diagramm + Erläuterungen>*
+*&lt;Diagramm + Erläuterungen>*
 
-# Querschnittliche Konzepte {#section-concepts}
+# Querschnittliche Konzepte
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Dieser Abschnitt beschreibt übergreifende, prinzipielle Regelungen und
 Lösungsansätze, die an mehreren Stellen (=*querschnittlich*) relevant
@@ -736,25 +694,20 @@ Themen gehören, beispielsweise:
 
 -   Regeln für den konkreten Einsatz von Technologien
 
--   prinzipielle --- meist technische --- Festlegungen übergreifender
-    Art
+-   prinzipielle — meist technische — Festlegungen übergreifender Art
 
 -   Implementierungsregeln
 
-::: formalpara-title
 **Motivation**
-:::
 
 Konzepte bilden die Grundlage für *konzeptionelle Integrität*
 (Konsistenz, Homogenität) der Architektur und damit eine wesentliche
 Grundlage für die innere Qualität Ihrer Systeme.
 
 Manche dieser Themen lassen sich nur schwer als Baustein in der
-Architektur unterbringen (z.B. das Thema „Sicherheit").
+Architektur unterbringen (z.B. das Thema „Sicherheit“).
 
-::: formalpara-title
 **Form**
-:::
 
 Kann vielfältig sein:
 
@@ -765,13 +718,11 @@ Kann vielfältig sein:
 
 -   beispielhafte Implementierung speziell für technische Konzepte,
 
--   Verweise auf „übliche" Nutzung von Standard-Frameworks
+-   Verweise auf „übliche“ Nutzung von Standard-Frameworks
     (beispielsweise die Nutzung von Hibernate als Object/Relational
     Mapper).
 
-::: formalpara-title
 **Struktur**
-:::
 
 Eine mögliche (nicht aber notwendige!) Untergliederung dieses
 Abschnittes könnte wie folgt aussehen (wobei die Zuordnung von Themen zu
@@ -797,29 +748,27 @@ concepts](images/08-Crosscutting-Concepts-Structure-DE.png)
 Siehe [Querschnittliche Konzepte](https://docs.arc42.org/section-8/) in
 der online-Dokumentation (auf Englisch).
 
-## *\<Konzept 1>* {#__emphasis_konzept_1_emphasis}
+## *&lt;Konzept 1>*
 
-*\<Erklärung>*
+*&lt;Erklärung>*
 
-## *\<Konzept 2>* {#__emphasis_konzept_2_emphasis}
+## *&lt;Konzept 2>*
 
-*\<Erklärung>*
+*&lt;Erklärung>*
 
-...
+…
 
-## *\<Konzept n>* {#__emphasis_konzept_n_emphasis}
+## *&lt;Konzept n>*
 
-*\<Erklärung>*
+*&lt;Erklärung>*
 
-# Architekturentscheidungen {#section-design-decisions}
+# Architekturentscheidungen
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Wichtige, teure, große oder riskante Architektur- oder
 Entwurfsentscheidungen inklusive der jeweiligen Begründungen. Mit
-\"Entscheidungen\" meinen wir hier die Auswahl einer von mehreren
+"Entscheidungen" meinen wir hier die Auswahl einer von mehreren
 Alternativen unter vorgegebenen Kriterien.
 
 Wägen Sie ab, inwiefern Sie Entscheidungen hier zentral beschreiben,
@@ -828,16 +777,12 @@ Bausteinen) sinnvoller ist. Vermeiden Sie Redundanz. Verweisen Sie evtl.
 auf Abschnitt 4, wo schon grundlegende strategische Entscheidungen
 beschrieben wurden.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Stakeholder des Systems sollten wichtige Entscheidungen verstehen und
 nachvollziehen können.
 
-::: formalpara-title
 **Form**
-:::
 
 Verschiedene Möglichkeiten:
 
@@ -854,11 +799,9 @@ Siehe [Architekturentscheidungen](https://docs.arc42.org/section-9/) in
 der arc42 Dokumentation (auf Englisch!). Dort finden Sie Links und
 Beispiele zum Thema ADR.
 
-# Qualitätsanforderungen {#section-quality-scenarios}
+# Qualitätsanforderungen
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Dieser Abschnitt enthält möglichst alle Qualitätsanforderungen als
 Qualitätsbaum mit Szenarien. Die wichtigsten davon haben Sie bereits in
@@ -867,49 +810,39 @@ Abschnitt 1.2 (Qualitätsziele) hervorgehoben.
 Nehmen Sie hier auch Qualitätsanforderungen geringerer Priorität auf,
 deren Nichteinhaltung oder -erreichung geringe Risiken birgt.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich
 beeinflussen, sollten Sie die für Ihre Stakeholder relevanten
 Qualitätsanforderungen kennen, möglichst konkret und operationalisiert.
 
-::: formalpara-title
 **Weiterführende Informationen**
-:::
 
 Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in
 der online-Dokumentation (auf Englisch!).
 
-## Qualitätsbaum {#_qualit_tsbaum}
+## Qualitätsbaum
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Der Qualitätsbaum (à la ATAM) mit Qualitätsszenarien an den Blättern.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Die mit Prioritäten versehene Baumstruktur gibt Überblick über
-die --- oftmals zahlreichen --- Qualitätsanforderungen.
+die — oftmals zahlreichen — Qualitätsanforderungen.
 
--   Baumartige Verfeinerung des Begriffes „Qualität", mit „Qualität"
-    oder „Nützlichkeit" als Wurzel.
+-   Baumartige Verfeinerung des Begriffes „Qualität“, mit „Qualität“
+    oder „Nützlichkeit“ als Wurzel.
 
 -   Mindmap mit Qualitätsoberbegriffen als Hauptzweige
 
 In jedem Fall sollten Sie hier Verweise auf die Qualitätsszenarien des
 folgenden Abschnittes aufnehmen.
 
-## Qualitätsszenarien {#_qualit_tsszenarien}
+## Qualitätsszenarien
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Konkretisierung der (in der Praxis oftmals vagen oder impliziten)
 Qualitätsanforderungen durch (Qualitäts-)Szenarien.
@@ -930,9 +863,7 @@ Wesentlich sind zwei Arten von Szenarien:
     Funktionalität wird implementiert oder die Anforderung an ein
     Qualitätsmerkmal ändert sich.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Szenarien operationalisieren Qualitätsanforderungen und machen deren
 Erfüllung mess- oder entscheidbar.
@@ -942,32 +873,26 @@ ATAM überprüfen wollen, bedürfen die in Abschnitt 1.2 genannten
 Qualitätsziele einer weiteren Präzisierung bis auf die Ebene von
 diskutierbaren und nachprüfbaren Szenarien.
 
-::: formalpara-title
 **Form**
-:::
 
 Entweder tabellarisch oder als Freitext.
 
-# Risiken und technische Schulden {#section-technical-risks}
+# Risiken und technische Schulden
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Eine nach Prioritäten geordnete Liste der erkannten Architekturrisiken
 und/oder technischen Schulden.
 
 > Risikomanagement ist Projektmanagement für Erwachsene.
 >
-> ---  Tim Lister Atlantic Systems Guild
+> —  Tim Lister Atlantic Systems Guild
 
 Unter diesem Motto sollten Sie Architekturrisiken und/oder technische
 Schulden gezielt ermitteln, bewerten und Ihren Management-Stakeholdern
 (z.B. Projektleitung, Product-Owner) transparent machen.
 
-::: formalpara-title
 **Form**
-:::
 
 Liste oder Tabelle von Risiken und/oder technischen Schulden, eventuell
 mit vorgeschlagenen Maßnahmen zur Risikovermeidung, Risikominimierung
@@ -977,11 +902,9 @@ Siehe [Risiken und technische
 Schulden](https://docs.arc42.org/section-11/) in der
 online-Dokumentation (auf Englisch!).
 
-# Glossar {#section-glossary}
+# Glossar
 
-::: formalpara-title
 **Inhalt**
-:::
 
 Die wesentlichen fachlichen und technischen Begriffe, die Stakeholder im
 Zusammenhang mit dem System verwenden.
@@ -989,9 +912,7 @@ Zusammenhang mit dem System verwenden.
 Nutzen Sie das Glossar ebenfalls als Übersetzungsreferenz, falls Sie in
 mehrsprachigen Teams arbeiten.
 
-::: formalpara-title
 **Motivation**
-:::
 
 Sie sollten relevante Begriffe klar definieren, so dass alle Beteiligten
 
@@ -999,17 +920,32 @@ Sie sollten relevante Begriffe klar definieren, so dass alle Beteiligten
 
 -   vermeiden, mehrere Begriffe für die gleiche Sache zu haben.
 
-Zweispaltige Tabelle mit \<Begriff> und \<Definition>.
+Zweispaltige Tabelle mit &lt;Begriff> und &lt;Definition>.
 
 Eventuell weitere Spalten mit Übersetzungen, falls notwendig.
 
 Siehe [Glossar](https://docs.arc42.org/section-12/) in der
 online-Dokumentation (auf Englisch!).
 
-+-----------------------+-----------------------------------------------+
-| Begriff               | Definition                                    |
-+=======================+===============================================+
-| *\<Begriff-1>*        | *\<Definition-1>*                             |
-+-----------------------+-----------------------------------------------+
-| *\<Begriff-2*         | *\<Definition-2>*                             |
-+-----------------------+-----------------------------------------------+
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Begriff</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><p><em>&lt;Begriff-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Definition-1&gt;</em></p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p><em>&lt;Begriff-2</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Definition-2&gt;</em></p></td>
+</tr>
+</tbody>
+</table>
