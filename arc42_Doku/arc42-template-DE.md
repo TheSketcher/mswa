@@ -1,4 +1,4 @@
-# 
+#
 
 **Über arc42**
 
@@ -13,6 +13,14 @@ contributors. Siehe <https://arc42.org>.
 # Einführung und Ziele
 
 ## Aufgabenstellung
+
+**Inhalt**
+
+Das Ziel dieses Projekts, ist die Entwicklung einer Software, die für Neufahrzeuge entsprechende Dokumente erstellt und dabei auf Informationen der einzelnen Abteilungen zugreift. Die Abteilungen sind Dokumentendruck, Fahrzeugentwicklung und die Logistik.
+
+**Motivation**
+
+Die Dokumente werden derzeit von den Abteilungen manuell erstellt. Die Dokumente werden in Papierform ausgedruckt durch den Dokumentendruck. Dies soll durch die Software vereinfacht und teilautomatisiert werden.
 
 ## Qualitätsziele
 
@@ -33,19 +41,30 @@ contributors. Siehe <https://arc42.org>.
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><p><em>&lt;Rolle-1&gt;</em></p></td>
-<td style="text-align: left;"><p><em>&lt;Kontakt-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em></em></p></td>
+<td style="text-align: left;"><p><em>Chris Caspari</em></p></td>
 <td style="text-align: left;"><p><em>&lt;Erwartung-1&gt;</em></p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><p><em>&lt;Rolle-2&gt;</em></p></td>
-<td style="text-align: left;"><p><em>&lt;Kontakt-2&gt;</em></p></td>
+<td style="text-align: left;"><p><em>Johannes Wittwer</em></p></td>
 <td style="text-align: left;"><p><em>&lt;Erwartung-2&gt;</em></p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><p><em></em></p></td>
+<td style="text-align: left;"><p><em>Lukas Gabriel</em></p></td>
+<td style="text-align: left;"><p><em>&lt;Erwartung-3&gt;</em></p></td>
 </tr>
 </tbody>
 </table>
 
 # Randbedingungen
+
+Die Rahmenbedingungen für das Projekt sind die folgenden:
+
+- Die Software soll in Java entwickelt werden.
+- Die Software soll mit Datenbanken kommunizieren.
+- Die Software soll alle gesammelten Daten in einem Format abspeichern, damit die Dokumente für die Neuwagen gedruckt werden können.
 
 # Kontextabgrenzung
 
@@ -69,38 +88,38 @@ contributors. Siehe <https://arc42.org>.
 
 ## Whitebox Gesamtsystem
 
-***&lt;Übersichtsdiagramm>***
+**_&lt;Übersichtsdiagramm>_**
 
 Begründung  
-*&lt;Erläuternder Text>*
+_&lt;Erläuternder Text>_
 
 Enthaltene Bausteine  
-*&lt;Beschreibung der enthaltenen Bausteine (Blackboxen)>*
+_&lt;Beschreibung der enthaltenen Bausteine (Blackboxen)>_
 
 Wichtige Schnittstellen  
-*&lt;Beschreibung wichtiger Schnittstellen>*
+_&lt;Beschreibung wichtiger Schnittstellen>_
 
 ### &lt;Name Blackbox 1>
 
-*&lt;Zweck/Verantwortung>*
+_&lt;Zweck/Verantwortung>_
 
-*&lt;Schnittstelle(n)>*
+_&lt;Schnittstelle(n)>_
 
-*&lt;(Optional) Qualitäts-/Leistungsmerkmale>*
+_&lt;(Optional) Qualitäts-/Leistungsmerkmale>_
 
-*&lt;(Optional) Ablageort/Datei(en)>*
+_&lt;(Optional) Ablageort/Datei(en)>_
 
-*&lt;(Optional) Erfüllte Anforderungen>*
+_&lt;(Optional) Erfüllte Anforderungen>_
 
-*&lt;(optional) Offene Punkte/Probleme/Risiken>*
+_&lt;(optional) Offene Punkte/Probleme/Risiken>_
 
 ### &lt;Name Blackbox 2>
 
-*&lt;Blackbox-Template>*
+_&lt;Blackbox-Template>_
 
 ### &lt;Name Blackbox n>
 
-*&lt;Blackbox-Template>*
+_&lt;Blackbox-Template>_
 
 ### &lt;Name Schnittstelle 1>
 
@@ -110,48 +129,48 @@ Wichtige Schnittstellen
 
 ## Ebene 2
 
-### Whitebox *&lt;Baustein 1>*
+### Whitebox _&lt;Baustein 1>_
 
-*&lt;Whitebox-Template>*
+_&lt;Whitebox-Template>_
 
-### Whitebox *&lt;Baustein 2>*
+### Whitebox _&lt;Baustein 2>_
 
-*&lt;Whitebox-Template>*
+_&lt;Whitebox-Template>_
 
 …
 
-### Whitebox *&lt;Baustein m>*
+### Whitebox _&lt;Baustein m>_
 
-*&lt;Whitebox-Template>*
+_&lt;Whitebox-Template>_
 
 ## Ebene 3
 
 ### Whitebox &lt;\_Baustein x.1\_&gt;
 
-*&lt;Whitebox-Template>*
+_&lt;Whitebox-Template>_
 
 ### Whitebox &lt;\_Baustein x.2\_&gt;
 
-*&lt;Whitebox-Template>*
+_&lt;Whitebox-Template>_
 
 ### Whitebox &lt;\_Baustein y.1\_&gt;
 
-*&lt;Whitebox-Template>*
+_&lt;Whitebox-Template>_
 
 # Laufzeitsicht
 
-## *&lt;Bezeichnung Laufzeitszenario 1>*
+## _&lt;Bezeichnung Laufzeitszenario 1>_
 
--   &lt;hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
+- &lt;hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 
--   &lt;hier Besonderheiten bei dem Zusammenspiel der Bausteine in
-    diesem Szenario erläutern>
+- &lt;hier Besonderheiten bei dem Zusammenspiel der Bausteine in
+  diesem Szenario erläutern>
 
-## *&lt;Bezeichnung Laufzeitszenario 2>*
+## _&lt;Bezeichnung Laufzeitszenario 2>_
 
 …
 
-## *&lt;Bezeichnung Laufzeitszenario n>*
+## _&lt;Bezeichnung Laufzeitszenario n>_
 
 …
 
@@ -159,48 +178,48 @@ Wichtige Schnittstellen
 
 ## Infrastruktur Ebene 1
 
-***&lt;Übersichtsdiagramm>***
+**_&lt;Übersichtsdiagramm>_**
 
 Begründung  
-*&lt;Erläuternder Text>*
+_&lt;Erläuternder Text>_
 
 Qualitäts- und/oder Leistungsmerkmale  
-*&lt;Erläuternder Text>*
+_&lt;Erläuternder Text>_
 
 Zuordnung von Bausteinen zu Infrastruktur  
-*&lt;Beschreibung der Zuordnung>*
+_&lt;Beschreibung der Zuordnung>_
 
 ## Infrastruktur Ebene 2
 
-### *&lt;Infrastrukturelement 1>*
+### _&lt;Infrastrukturelement 1>_
 
-*&lt;Diagramm + Erläuterungen>*
+_&lt;Diagramm + Erläuterungen>_
 
-### *&lt;Infrastrukturelement 2>*
+### _&lt;Infrastrukturelement 2>_
 
-*&lt;Diagramm + Erläuterungen>*
+_&lt;Diagramm + Erläuterungen>_
 
 …
 
-### *&lt;Infrastrukturelement n>*
+### _&lt;Infrastrukturelement n>_
 
-*&lt;Diagramm + Erläuterungen>*
+_&lt;Diagramm + Erläuterungen>_
 
 # Querschnittliche Konzepte
 
-## *&lt;Konzept 1>*
+## _&lt;Konzept 1>_
 
-*&lt;Erklärung>*
+_&lt;Erklärung>_
 
-## *&lt;Konzept 2>*
+## _&lt;Konzept 2>_
 
-*&lt;Erklärung>*
+_&lt;Erklärung>_
 
 …
 
-## *&lt;Konzept n>*
+## _&lt;Konzept n>_
 
-*&lt;Erklärung>*
+_&lt;Erklärung>_
 
 # Architekturentscheidungen
 
