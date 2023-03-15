@@ -14,17 +14,33 @@ contributors. Siehe <https://arc42.org>.
 
 ## Aufgabenstellung
 
-**Inhalt**
-
 Das Ziel dieses Projekts, ist die Entwicklung einer Software, die für Neufahrzeuge entsprechende Dokumente erstellt und dabei auf Informationen der einzelnen Abteilungen zugreift. Die Abteilungen sind Dokumentendruck, Fahrzeugentwicklung und die Logistik.
-
-**Motivation**
 
 Die Dokumente werden derzeit von den Abteilungen manuell erstellt. Die Dokumente werden in Papierform ausgedruckt durch den Dokumentendruck. Dies soll durch die Software vereinfacht und teilautomatisiert werden.
 
 ## Qualitätsziele
 
+- Datensendung nur gegenüber authentifizierte Schnittstellen
+- ein zuverlässiges System führt jederzeit die festgelegten Funktionen durch
+- das System sollte offen für Modifikationen sein, um es jederzeit zu verbessern, korrigieren oder auch an geänderte Bedürfnisse anpassen zu können
+- eine benutzerfreundliche Oberfläche, die es dem Benutzer ermöglicht, die Software intuitiv zu bedienen
+- eine angemessene Leistung, die es dem Benutzer ermöglicht, die Software schnell zu bedienen
+- die Software bietet jede Funktionalität, die den angegebenen Bedürfnissen entspricht
+
 ## Stakeholder
+
+**Logistik**
+
+Unsere Software übergibt der Logistik die Fahrzeugkonfiguration, um daraus das Gewicht und die Abmessungen des Fahrzeugs zu berechnen. Diese Ergebnisse werden mit der übergebenen Konfiguration zurückgeliefert.
+
+**Fahrzeugentwicklung**
+
+Hier wird ebenfalls die Fahrzeugkonfiguration durch unsere Software übergeben. Als Ergebnis erhalten wir die zur Fahrzeugkonfiguration zugehörigen Messdaten des Fahrzeugs.
+
+**Print**
+
+Hier werden die Ergebnisse der Anfragen von Logistik und Fahrzeugentwicklung übergeben. Dieses Ergebnisse werden benutzt, um den Fahrzeugbrief drucken zu können.
+Gleichzeitig erhalten wir hier die Fahrzeugkonfiguration, um daraus die Fahrzeugdaten zu berechnen.
 
 <table>
 <colgroup>
@@ -34,26 +50,23 @@ Die Dokumente werden derzeit von den Abteilungen manuell erstellt. Die Dokumente
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Rolle</th>
-<th style="text-align: left;">Kontakt</th>
+<th style="text-align: left;">Abteilung</th>
 <th style="text-align: left;">Erwartungshaltung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><p><em></em></p></td>
-<td style="text-align: left;"><p><em>Chris Caspari</em></p></td>
-<td style="text-align: left;"><p><em>&lt;Erwartung-1&gt;</em></p></td>
+<td style="text-align: left;"><p><em>Logistik</em></p></td>
+<td style="text-align: left;"><p><em>Benötigt Fahrzeugkonfiguration</em></p></td>
+
 </tr>
 <tr class="even">
-<td style="text-align: left;"><p><em>&lt;Rolle-2&gt;</em></p></td>
-<td style="text-align: left;"><p><em>Johannes Wittwer</em></p></td>
-<td style="text-align: left;"><p><em>&lt;Erwartung-2&gt;</em></p></td>
+<td style="text-align: left;"><p><em>Print</em></p></td>
+<td style="text-align: left;"><p><em>Benötigen simuliertes Ergebnis</em></p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><p><em></em></p></td>
-<td style="text-align: left;"><p><em>Lukas Gabriel</em></p></td>
-<td style="text-align: left;"><p><em>&lt;Erwartung-3&gt;</em></p></td>
+<td style="text-align: left;"><p><em>Fahrzeugentwicklung</em></p></td>
+<td style="text-align: left;"><p><em>Erhält Fahrzeugkonfiguration</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -70,17 +83,11 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 
 ## Fachlicher Kontext
 
-**&lt;Diagramm und/oder Tabelle>**
-
-**&lt;optional: Erläuterung der externen fachlichen Schnittstellen>**
+![Diagramm zur Darstellung der Beziehungen zwischen den verschiedenen Schnittstellen](images/System_Context_Diagramm_-_System_Context_Diagramm.png)_Diagramm zur Darstellung der Beziehungen zwischen den verschiedenen Schnittstellen_
 
 ## Technischer Kontext
 
-**&lt;Diagramm oder Tabelle>**
-
-**&lt;optional: Erläuterung der externen technischen Schnittstellen>**
-
-**&lt;Mapping fachliche auf technische Schnittstellen>**
+Hier noch Chris Diagramm einfügen
 
 # Lösungsstrategie
 
