@@ -46,5 +46,6 @@
         <jarDirectory url="jar://$MODULE_DIR$/Application/Externe JAR´s/vecto4j.jar!/" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jackson-datatype-jsr310-2.14.2" level="project" />
   </component>
 </module>
