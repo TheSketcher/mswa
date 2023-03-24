@@ -20,6 +20,7 @@ Die Dokumente werden derzeit von den Abteilungen manuell erstellt. Die Dokumente
 
 ## Qualitätsziele
 
+- Performance der Schnittstellen / Schnelle Antwortzeiten
 - Datensendung nur gegenüber authentifizierte Schnittstellen
 - ein zuverlässiges System führt jederzeit die festgelegten Funktionen durch
 - das System sollte offen für Modifikationen sein, um es jederzeit zu verbessern, korrigieren oder auch an geänderte Bedürfnisse anpassen zu können
