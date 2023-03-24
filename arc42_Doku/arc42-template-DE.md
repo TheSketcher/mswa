@@ -87,7 +87,7 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 
 ## Technischer Kontext
 
-Hier noch Chris Diagramm einfügen
+![Level 2 Content-Diagramm zur Darstellung der inneren Struktur der eigenen Schnittstelle / Software.](images/C4_Model_Dynamic_Diagram_for_API_Application.png)_Content Diagramm zur Darstellung der eigenen Anwendung und der internen Struktur._
 
 # Lösungsstrategie
 
