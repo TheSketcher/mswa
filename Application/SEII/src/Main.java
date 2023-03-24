@@ -1,11 +1,18 @@
 public class Main {
     public static void main(String[] args) {
         try {
-            VehicleComponentsCom.sendPostRequest();
+            //VehicleComponentsCom.sendPostRequest();
+
+            // create the LogisticsCom object
+            LogisticCom logisticsCom = new LogisticCom();
+
+            // send POST request for weights
+            LogisticCom.sendPostRequest(LogisticCom.API_WEIGHTS_URL);
+
+            // send POST request for dimensions
+            LogisticCom.sendPostRequest(LogisticCom.API_DIMENSIONS_URL);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        LogisticCom logisticCom = new LogisticCom();
-        System.out.println(logisticCom.getWeights("983.493", "A1A, B2B, C3C", "2023-03-24T13:36:08.943Z"));
     }
 }
