@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        try {
+            VehicleComponentsCom.sendPostRequest();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

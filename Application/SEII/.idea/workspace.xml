@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="801bbde3-f7f2-42e2-a5b4-a5b9bbb3f218" name="Changes" comment="" />
+    <list default="true" id="801bbde3-f7f2-42e2-a5b4-a5b9bbb3f218" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Externe JAR´s/jackson-annotations-2.14.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Externe JAR´s/jackson-core-2.14.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Externe JAR´s/jackson-databind-2.14.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Externe JAR´s/jackson-datatype-jsr310-2.14.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Externe JAR´s/vecto4j.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VehicleComponentsCom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/mswa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/mswa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEII.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SEII.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NSfwjfWzKGVDBMy1qhcWxAKSHF" />
   <component name="ProjectViewState">
@@ -18,9 +43,27 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/IDE Projekte/Git-Repositories/ModerneSE2/mswa/Application/Externe JAR´s/vecto4j.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SEII" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
