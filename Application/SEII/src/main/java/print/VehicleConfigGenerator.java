@@ -53,7 +53,7 @@ public class VehicleConfigGenerator {
 		System.out.println("Generating airdrag codes...");
 		response += getRandomizedAirdragCodes();
 		System.out.println("Generating codes...");
-		response += getFullyRandomizedCodes(random.nextInt(5, 10));
+		response += getFullyRandomizedCodes(random.nextInt( 10)) + 5;
 		return response;
 	}
 
@@ -67,7 +67,7 @@ public class VehicleConfigGenerator {
 	}
 
 	private Object getRandomizedBatteryCodes() {
-		int batteries = random.nextInt(3,4);
+		int batteries = random.nextInt(4) + 3;
 		return getRandomizedCodes(batteries, 'B');
 	}
 
