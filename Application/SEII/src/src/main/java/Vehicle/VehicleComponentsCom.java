@@ -1,3 +1,4 @@
+package src.main.java.Vehicle;
 
 import java.net.HttpURLConnection;
 import java.net.URL;

@@ -1,7 +1,9 @@
+import src.main.java.Logistic.LogisticCom;
+
 public class Main {
     public static void main(String[] args) {
         try {
-            //VehicleComponentsCom.sendPostRequest();
+            //src.main.java.Logistic.Vehicle.VehicleComponentsCom.sendPostRequest();
 
             // create the LogisticsCom object
             LogisticCom logisticsCom = new LogisticCom();

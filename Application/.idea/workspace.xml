@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb3193bf-027c-4a24-8acb-3c1d26946d46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SEII/lib/vecto4j.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Logistic/VehicleDimensions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Logistic/VehicleWeights.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Print/VehicleConfigGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Print/VehicleConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Print/VehicleConfigurationMetadata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Print/VehicleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Vehicle/ComponentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Vehicle/VehicleComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Modelle/C4 Model Dynamic Diagram for API Application.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/mswa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/mswa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Externe JAR´s/jackson-annotations-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Externe JAR´s/jackson-core-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Externe JAR´s/jackson-databind-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Externe JAR´s/jackson-datatype-jsr310-2.14.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Externe JAR´s/vecto4j.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEII/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEII/src/LogisticCom.java" beforeDir="false" afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Logistic/LogisticCom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEII/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SEII/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEII/src/VehicleComponentsCom.java" beforeDir="false" afterPath="$PROJECT_DIR$/SEII/src/src/main/java/Vehicle/VehicleComponentsCom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/Architektur_Entscheidungen/adr.md" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/Architektur_Entscheidungen/adr.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NgJ7V7pvnpNG4K6sDYCeC1FFxf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IDE Projekte/Git-Repositories/ModerneSE2/mswa/Application/SEII/lib/vecto4j.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDE Projekte\Git-Repositories\ModerneSE2\mswa\Application\SEII\lib" />
+      <recent name="D:\IDE Projekte\Git-Repositories\ModerneSE2\mswa\Application\SEII" />
+      <recent name="D:\IDE Projekte\Git-Repositories\ModerneSE2\mswa\Application\SEII\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb3193bf-027c-4a24-8acb-3c1d26946d46" name="Changes" comment="" />
+      <created>1680079624191</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680079624191</updated>
+    </task>
+    <servers />
+  </component>
+</project>
