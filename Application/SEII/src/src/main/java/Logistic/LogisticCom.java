@@ -47,4 +47,8 @@ public class LogisticCom {
         // Close the connection
         conn.disconnect();
     }
+
+    public void getWeights(){
+
+    }
 }
