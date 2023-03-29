@@ -1,4 +1,4 @@
-/* import main.java.logistic.LogisticCom;
+/* import LogisticCom;
 
 public class Main {
     public static void main(String[] args) {

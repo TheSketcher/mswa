@@ -1,5 +1,3 @@
-package main.java.vehicle;
-
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.OutputStream;
