@@ -13,6 +13,8 @@ public class LogisticCom {
     public LogisticCom() {
 
     }
-    // make a json object with jackson with 3 parameters
 
+    public void getWeights(){
+
+    }
 }
