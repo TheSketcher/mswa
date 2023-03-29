@@ -1,4 +1,4 @@
-package de.dhbw.ka.se2.plugin.logistics;
+package src.main.java.plugin;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,9 +11,9 @@ import org.apache.hc.client5.http.fluent.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-import de.dhbw.ka.se2.application.print.VehicleConfigGenerator;
-import de.dhbw.ka.se2.domain.logistics.VehicleWeights;
-import de.dhbw.ka.se2.domain.print.VehicleConfiguration;
+import src.main.java.print.VehicleConfigGenerator;
+import src.main.java.logistic.VehicleWeights;
+import src.main.java.print.VehicleConfiguration;
 
 public class LogisticsClient {
 	public static void main(String[] args) {

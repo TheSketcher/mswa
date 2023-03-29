@@ -1,8 +1,10 @@
-package src.main.java.Vehicle;
+package src.main.java.vehicle;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class VehicleComponent {
+public class VehicleComponent implements Serializable {
+	private static final long serialVersionUID = 2011974189537717226L;
 	private int id;
 	private ComponentType type;
 	private LocalDate validFrom;

@@ -1,4 +1,4 @@
-package src.main.java.Logistic;
+package src.main.java.logistic;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;

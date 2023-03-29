@@ -1,4 +1,4 @@
-import src.main.java.Logistic.LogisticCom;
+import src.main.java.logistic.LogisticCom;
 
 public class Main {
     public static void main(String[] args) {

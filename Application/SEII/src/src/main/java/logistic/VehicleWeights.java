@@ -1,4 +1,4 @@
-package src.main.java.Logistic;
+package src.main.java.logistic;
 
 import java.io.Serializable;
 

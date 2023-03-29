@@ -1,4 +1,4 @@
-package src.main.java.Vehicle;
+package src.main.java.vehicle;
 
 public enum ComponentType {
 	tyre, battery, motor, gearbox, airdrag, axle;

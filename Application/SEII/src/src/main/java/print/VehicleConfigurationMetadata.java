@@ -1,4 +1,4 @@
-package src.main.java.Print;
+package src.main.java.print;
 
 public class VehicleConfigurationMetadata {
 	private static final VehicleConfigurationMetadata[] MODELS_VALID = {
