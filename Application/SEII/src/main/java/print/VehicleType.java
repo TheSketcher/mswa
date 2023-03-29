@@ -1,4 +1,4 @@
-package src.main.java.print;
+package main.java.print;
 
 /**
  * Fahzeugtyp

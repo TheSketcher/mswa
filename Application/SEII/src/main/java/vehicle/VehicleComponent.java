@@ -1,4 +1,4 @@
-package src.main.java.vehicle;
+package main.java.vehicle;
 
 import java.io.Serializable;
 import java.time.LocalDate;
