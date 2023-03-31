@@ -1,4 +1,4 @@
-package main.java.plugin;
+package main.java.logistic;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,14 +11,15 @@ import org.apache.hc.client5.http.fluent.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-import main.java.print.VehicleConfigGenerator;
-import main.java.logistic.VehicleWeights;
-import main.java.print.VehicleConfiguration;
+import de.dhbw.ka.se2.application.print.VehicleConfigGenerator;
+import de.dhbw.ka.se2.application.vecto.VehicleWeightsClient;
+import de.dhbw.ka.se2.domain.logistics.VehicleWeights;
+import de.dhbw.ka.se2.domain.print.VehicleConfiguration;
 
-public class LogisticsClient {
+public class LogisticsClient implements VehicleWeightsClient {
 	public static void main(String[] args) {
 		VehicleConfigGenerator gen = new VehicleConfigGenerator();
-		VehicleConfiguration vehicle = gen.generateVehicle(false);
+		VehicleConfiguration vehicle = gen.generateVehicle(false).getConfig();
 		System.out.println(new LogisticsClient().getWeights(vehicle));
 	}
 
