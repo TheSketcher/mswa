@@ -11,10 +11,8 @@ import org.apache.hc.client5.http.fluent.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-import de.dhbw.ka.se2.application.print.VehicleConfigGenerator;
-import de.dhbw.ka.se2.application.vecto.VehicleWeightsClient;
-import de.dhbw.ka.se2.domain.logistics.VehicleWeights;
-import de.dhbw.ka.se2.domain.print.VehicleConfiguration;
+import main.java.print.VehicleConfigGenerator;
+import main.java.print.VehicleConfiguration;
 
 public class LogisticsClient implements VehicleWeightsClient {
 	public static void main(String[] args) {

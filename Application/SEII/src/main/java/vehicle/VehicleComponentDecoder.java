@@ -11,9 +11,9 @@ import com.fasterxml.jackson.databind.KeyDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
-import de.dhbw.ka.se2.adapter.vehicledata.VehicleComponentDecoder.NoDeserializer;
-import de.dhbw.ka.se2.domain.vehicledata.ComponentType;
-import de.dhbw.ka.se2.domain.vehicledata.VehicleComponent;
+import main.java.vehicle.VehicleComponentDecoder.NoDeserializer;
+import main.java.vehicle.ComponentType;
+import main.java.vehicle.VehicleComponent;
 import de.dhbw.ka.se2.vecto4j.input.Airdrag;
 import de.dhbw.ka.se2.vecto4j.input.Axle;
 import de.dhbw.ka.se2.vecto4j.input.Battery;
@@ -22,8 +22,7 @@ import de.dhbw.ka.se2.vecto4j.input.Motor;
 import de.dhbw.ka.se2.vecto4j.input.Temperature;
 import de.dhbw.ka.se2.vecto4j.input.Tyre;
 import de.dhbw.ka.se2.vecto4j.input.VehicleInput;
-import main.java.vehicle.ComponentType;
-import main.java.vehicle.VehicleComponent;
+
 
 public class VehicleComponentDecoder {
 

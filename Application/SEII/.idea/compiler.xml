@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SEII" />
         <module name="Application" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SEII" target="9" />
+    </bytecodeTargetLevel>
   </component>
 </project>

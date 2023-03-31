@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Stream;
 
-import de.dhbw.ka.se2.domain.print.FullVehicle;
-import de.dhbw.ka.se2.domain.print.VehicleConfiguration;
-import de.dhbw.ka.se2.domain.print.VehicleConfigurationMetadata;
+
 
 public class VehicleConfigGenerator {
 	private final Random random;
@@ -60,7 +58,7 @@ public class VehicleConfigGenerator {
 		System.out.println("Generating airdrag codes...");
 		response += getRandomizedAirdragCodes();
 		System.out.println("Generating codes...");
-		response += getFullyRandomizedCodes(random.nextInt(5, 10));
+		response += getFullyRandomizedCodes(random.nextInt(10));
 		return response;
 	}
 
@@ -74,7 +72,7 @@ public class VehicleConfigGenerator {
 	}
 
 	private Object getRandomizedBatteryCodes() {
-		int batteries = random.nextInt(3,4);
+		int batteries = random.nextInt(4);
 		return getRandomizedCodes(batteries, 'B');
 	}
 

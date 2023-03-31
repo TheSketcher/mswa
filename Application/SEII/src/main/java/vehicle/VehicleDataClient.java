@@ -1,5 +1,7 @@
 package main.java.vehicle;
 
+
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -18,11 +20,11 @@ public class VehicleDataClient {
 
     public static void main (String[] args) {
         VehicleConfigGenerator gen = new VehicleConfigGenerator();
-        VehicleConfigGenerator vehicle = gen.generateVehicle(false);
-        System.out.println(new VehicleDataClient().getComponents(vehicle));
+        VehicleConfiguration vehicle = gen.generateVehicle(false).getConfig();
+        System.out.println(new VehicleDataClient().getVehicleComponents(vehicle));
     }
 
-    public List<VehicleComponent> getComponents(final VehicleConfiguration vehicle){
+    public List<VehicleComponent> getVehicleComponents(final VehicleConfiguration vehicle){
         // Anfrage serialisieren
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
@@ -56,7 +58,7 @@ public class VehicleDataClient {
             throw new RuntimeException("Request failed - missing response!");
         }
         try {
-            return objectMapper.readValue(body, new TypeReference<List<VehicleComponents>>() {
+            return objectMapper.readValue(body, new TypeReference<List<VehicleComponent>>() {
             });
         } catch (IOException e) {
             throw new RuntimeException("Request failed - cannot parse response!");
