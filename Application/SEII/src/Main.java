@@ -1,28 +1,10 @@
-/* import LogisticCom;
+import de.dhbw.ka.se2.vecto4j.Co2Simulator;
+import main.java.logistic.LogisticsClient;
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            //src.main.java.Logistic.Vehicle.VehicleComponentsCom.sendPostRequest();
-
-            // create the LogisticsCom object
-            LogisticCom logisticsCom = new LogisticCom();
-
-            // send POST request for weights
-            LogisticCom.sendPostRequest(LogisticCom.API_WEIGHTS_URL);
-
-            // send POST request for dimensions
-            LogisticCom.sendPostRequest(LogisticCom.API_DIMENSIONS_URL);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        VehicleWeightsClient weights = new LogisticsClient();
+        Simulator vecto = new Co2Simulator();
+        Co2Simulator process = new Co2Simulator()
     }
-
-
-
-
 }
-
-
- */
