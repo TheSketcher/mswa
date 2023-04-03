@@ -90,8 +90,6 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 
 ![Level 2 Content-Diagramm zur Darstellung der inneren Struktur der eigenen Schnittstelle / Software.](images/C4_Model_Dynamic_Diagram_for_API_Application.png)_Content Diagramm zur Darstellung der eigenen Anwendung und der internen Struktur._
 
-# Lösungsstrategie
-
 # Laufzeitsicht
 
 - Wir haben eine Dokumentendruck Schnittstelle von der Fahrzeugkonfigurations-Daten an unsere zentrale Verwaltungsschnittstelle gesendet werden.
@@ -102,72 +100,25 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 - Nach dem hinzufügen der Daten zur Fahrzeugkonfiguration wird jeweils das fertige Ergebnis der API´s an eine separate Datenbank zur Datensicherung geschickt und gleizeitig auch wieder als Response zum Scheduler, welcher sich in unserer Verwaltungs-Schnittstelle befindet.
 - Nachdem der Scheduler eine Antwort von den API-Schnittstellen erhält, wird er die Weiterleitung an ein Kombinations-Tool initiieren. Das Kombinations-Tool wird die gesamten Daten zur Verfügung stellen, um eine Vecto Library zu vervollständigen. Anschließend wird eine Fahrtzeugsimulation berechnet, die CO2-Messdaten ausgibt. Diese Ergebnisse werden zur Datensicherung an die separate Datenbank gesendet und zeitgleich an den Absender der ursprünglichen Anfrage zurückgeschickt inklusive eines aktuelle Zeitstempels der berechneten Simulation, um den Dokumentendruck zu starten.
 
-# Verteilungssicht
-
-## Infrastruktur Ebene 1
-
-**_&lt;Übersichtsdiagramm>_**
-
-Begründung  
-_&lt;Erläuternder Text>_
-
-Qualitäts- und/oder Leistungsmerkmale  
-_&lt;Erläuternder Text>_
-
-Zuordnung von Bausteinen zu Infrastruktur  
-_&lt;Beschreibung der Zuordnung>_
-
-## Infrastruktur Ebene 2
-
-### _&lt;Infrastrukturelement 1>_
-
-_&lt;Diagramm + Erläuterungen>_
-
-### _&lt;Infrastrukturelement 2>_
-
-_&lt;Diagramm + Erläuterungen>_
-
-…
-
-### _&lt;Infrastrukturelement n>_
-
-_&lt;Diagramm + Erläuterungen>_
-
-# Querschnittliche Konzepte
-
-## _&lt;Konzept 1>_
-
-_&lt;Erklärung>_
-
-## _&lt;Konzept 2>_
-
-_&lt;Erklärung>_
-
-…
-
-## _&lt;Konzept n>_
-
-_&lt;Erklärung>_
-
 # Architekturentscheidungen
 
 Wir haben uns für die folgenden Architekturentscheidungen entschieden:
 
 - **Ein Verteiltes System welches sich aus mehreren Schichten zusammensetzt.**
 
-####Beschreibung der Architektur:
+#### Beschreibung der Architektur:
 
-Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Schicht** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
+- Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Schicht** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
 
-Die zentrale Verwaltungsschnittstelle stellt die **zweite Schicht** dar und dient als zentraler Punkt für die Authentifizierung und Weiterleitung von Anfragen.
+- Die zentrale Verwaltungsschnittstelle stellt die **zweite Schicht** dar und dient als zentraler Punkt für die Authentifizierung und Weiterleitung von Anfragen.
 
-Die **dritte Schicht** ist die Security-Komponente, die in einer externen Datenbank die Authentifizierung überprüft. Die **vierte Schicht** ist der Scheduler, der die Aufgabe hat, die Fahrzeugkonfigurations-Daten an die API-Schnittstellen der Fahrzeugentwicklung und Logistik weiterzuleiten.
+- Die **dritte Schicht** ist die Security-Komponente, die in einer externen Datenbank die Authentifizierung überprüft. Die **vierte Schicht** ist der Scheduler, der die Aufgabe hat, die Fahrzeugkonfigurations-Daten an die API-Schnittstellen der Fahrzeugentwicklung und Logistik weiterzuleiten.
 
-Die **fünfte Schicht** besteht aus den API-Schnittstellen, die die benötigten Messdaten zur Fahrzeugkonfiguration hinzufügen und die Ergebnisse an die separate Datenbank zur Datensicherung zurücksenden. Die **sechste Schicht** ist das Kombinations-Tool, das die Daten für die Vecto Library vervollständigt und die Fahrtzeugsimulation berechnet.
+- Die **fünfte Schicht** besteht aus den API-Schnittstellen, die die benötigten Messdaten zur Fahrzeugkonfiguration hinzufügen und die Ergebnisse an die separate Datenbank zur Datensicherung zurücksenden. Die **sechste Schicht** ist das Kombinations-Tool, das die Daten für die Vecto Library vervollständigt und die Fahrtzeugsimulation berechnet.
 
-Die **siebte Schicht** ist die separate Datenbank zur Datensicherung, die für die Speicherung der Ergebnisse aus den API-Schnittstellen und der CO2-Messdaten verwendet wird. Schließlich ist die achte Schicht der Dokumentendruck, der die Ergebnisse der Fahrtzeugsimulation ausgibt und die CO2-Messdaten zur separaten Datensicherung an die Datenbank sendet.
+- Die **siebte Schicht** ist die separate Datenbank zur Datensicherung, die für die Speicherung der Ergebnisse aus den API-Schnittstellen und der CO2-Messdaten verwendet wird. Schließlich ist die achte Schicht der Dokumentendruck, der die Ergebnisse der Fahrtzeugsimulation ausgibt und die CO2-Messdaten zur separaten Datensicherung an die Datenbank sendet.
 
-Insgesamt ermöglicht diese Architektur eine klare Trennung der Verantwortlichkeiten und eine effiziente Handhabung der Fahrzeugkonfigurations-Daten, wodurch ein reibungsloser Workflow gewährleistet wird.
+##### Insgesamt ermöglicht diese Architektur eine klare Trennung der Verantwortlichkeiten und eine effiziente Handhabung der Fahrzeugkonfigurations-Daten, wodurch ein reibungsloser Workflow gewährleistet wird.
 
 # Qualitätsanforderungen
 
@@ -180,7 +131,13 @@ der online-Dokumentation (auf Englisch!).
 
 ## Qualitätsszenarien
 
-# Risiken und technische Schulden
+# Herausforderungen und Problemstellung
+
+- Die Zusammensetzung der einzelnen Schnittstellen hat sich als sehr komplex herausgestellt, da die Daten von einer Schnittstelle an die nächste weitergeleitet werden müssen und diese wiederum die Daten an die nächste Schnittstelle weiterleiten müssen.
+- Die Authentifizierung der Daten muss in einer externen Datenbank erfolgen, da diese Datenbank nicht Teil der Anwendung ist.
+- Das gewählte Architekturmodell aus der Theorie in die Praxis umzusetzen war aufgrund mangelnder Erfahrung mit der Architektur sehr schwierig.
+- Die einbindung der Http-Requests in die Anwendung war sehr komplex, da wir uns mit der Architektur noch nicht ausreichend vertraut gemacht hatten.
+- Wir haben grundlegend erkannt das unsere kenntnisse in Java sowie der Architektur nicht ausreichend waren um die Anforderungen zu erfüllen.
 
 # Glossar
 
