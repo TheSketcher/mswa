@@ -1,24 +1,39 @@
-#
+# Inhaltsverzeichnis<!-- omit in toc -->
 
-**Über arc42**
+<!-- vscode-markdown-toc -->
 
-arc42, das Template zur Dokumentation von Software- und
-Systemarchitekturen.
+- [Einführung und Ziele](#einführung-und-ziele)
+  - [Aufgabenstellung](#aufgabenstellung)
+  - [Qualitätsziele](#qualitätsziele)
+  - [Stakeholder](#stakeholder)
+- [Randbedingungen](#randbedingungen)
+- [Kontextabgrenzung](#kontextabgrenzung)
+  - [Fachlicher Kontext](#fachlicher-kontext)
+  - [Technischer Kontext](#technischer-kontext)
+- [Laufzeitsicht](#laufzeitsicht)
+- [Architekturentscheidungen](#architekturentscheidungen)
+  - [Beschreibung der Architektur:](#beschreibung-der-architektur)
+- [Qualitätsanforderungen](#qualitätsanforderungen)
+  - [Anforderungen an die Architektur:](#anforderungen-an-die-architektur)
+- [Qualitätsbaum](#qualitätsbaum)
+- [Qualitätsszenarien](#qualitätsszenarien)
+  - [Herausforderungen und Problemstellung](#herausforderungen-und-problemstellung)
 
-Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
+<!-- vscode-markdown-toc-config
+	numbering=false
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
-Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
-contributors. Siehe <https://arc42.org>.
+# <a name='Einführung der Ziele'></a>Einführung und Ziele
 
-# Einführung und Ziele
-
-## Aufgabenstellung
+## <a name='Aufgabenstellung'></a>Aufgabenstellung
 
 Das Ziel dieses Projekts, ist die Entwicklung einer Software, die für Neufahrzeuge entsprechende Dokumente erstellt und dabei auf Informationen der einzelnen Abteilungen zugreift. Die Abteilungen sind Dokumentendruck, Fahrzeugentwicklung und die Logistik.
 
 Die Dokumente werden derzeit von den Abteilungen manuell erstellt. Die Dokumente werden in Papierform ausgedruckt durch den Dokumentendruck. Dies soll durch die Software vereinfacht und teilautomatisiert werden.
 
-## Qualitätsziele
+## <a name='Qualittsziele'></a>Qualitätsziele
 
 - Performance der Schnittstellen / Schnelle Antwortzeiten
 - Datensendung nur gegenüber authentifizierte Schnittstellen
@@ -28,7 +43,7 @@ Die Dokumente werden derzeit von den Abteilungen manuell erstellt. Die Dokumente
 - eine angemessene Leistung, die es dem Benutzer ermöglicht, die Software schnell zu bedienen
 - die Software bietet jede Funktionalität, die den angegebenen Bedürfnissen entspricht
 
-## Stakeholder
+## <a name='Stakeholder'></a>Stakeholder
 
 **Logistik**
 
@@ -72,7 +87,7 @@ Gleichzeitig erhalten wir hier die Fahrzeugkonfiguration, um daraus die Fahrzeug
 </tbody>
 </table>
 
-# Randbedingungen
+# <a name='Randbedingungen'></a>Randbedingungen
 
 Die Rahmenbedingungen für das Projekt sind die folgenden:
 
@@ -80,17 +95,17 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 - Die Software soll mit Datenbanken kommunizieren.
 - Die Software soll alle gesammelten Daten in einem Format abspeichern, damit die Dokumente für die Neuwagen gedruckt werden können.
 
-# Kontextabgrenzung
+# <a name='Kontextabgrenzung'></a>Kontextabgrenzung
 
-## Fachlicher Kontext
+## <a name='FachlicherKontext'></a>Fachlicher Kontext
 
 ![Diagramm zur Darstellung der Beziehungen zwischen den verschiedenen Schnittstellen](images/System_Context_Diagramm_-_System_Context_Diagramm.png)_Diagramm zur Darstellung der Beziehungen zwischen den verschiedenen Schnittstellen_
 
-## Technischer Kontext
+## <a name='TechnischerKontext'></a>Technischer Kontext
 
 ![Level 2 Content-Diagramm zur Darstellung der inneren Struktur der eigenen Schnittstelle / Software.](images/C4_Model_Dynamic_Diagram_for_API_Application.png)_Content Diagramm zur Darstellung der eigenen Anwendung und der internen Struktur._
 
-# Laufzeitsicht
+# <a name='Laufzeitschicht'></a>Laufzeitsicht
 
 - Wir haben eine Dokumentendruck Schnittstelle von der Fahrzeugkonfigurations-Daten an unsere zentrale Verwaltungsschnittstelle gesendet werden.
 - Diese zentrale Verwaltungsschnittstelle hat eine eigenes Web-Interface wo die Anfrage der zugesendeten Daten ankommen, diese sendet an eine Security-Komponente eine Authentifizierungsanfrage wohingegen diese Security-Komponente in einer Datenbank außerhalb die authentifikation abfragt.
@@ -100,13 +115,13 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 - Nach dem hinzufügen der Daten zur Fahrzeugkonfiguration wird jeweils das fertige Ergebnis der API´s an eine separate Datenbank zur Datensicherung geschickt und gleizeitig auch wieder als Response zum Scheduler, welcher sich in unserer Verwaltungs-Schnittstelle befindet.
 - Nachdem der Scheduler eine Antwort von den API-Schnittstellen erhält, wird er die Weiterleitung an ein Kombinations-Tool initiieren. Das Kombinations-Tool wird die gesamten Daten zur Verfügung stellen, um eine Vecto Library zu vervollständigen. Anschließend wird eine Fahrtzeugsimulation berechnet, die CO2-Messdaten ausgibt. Diese Ergebnisse werden zur Datensicherung an die separate Datenbank gesendet und zeitgleich an den Absender der ursprünglichen Anfrage zurückgeschickt inklusive eines aktuelle Zeitstempels der berechneten Simulation, um den Dokumentendruck zu starten.
 
-# Architekturentscheidungen
+# <a name='Architekturentscheidungen'></a>Architekturentscheidungen
 
 Wir haben uns für die folgenden Architekturentscheidungen entschieden:
 
 - **Ein Verteiltes System welches sich aus mehreren Schichten zusammensetzt.**
 
-#### Beschreibung der Architektur:
+### <a name='BeschreibungderArchitektur:'></a>Beschreibung der Architektur:
 
 - Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Schicht** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
 
@@ -118,71 +133,46 @@ Wir haben uns für die folgenden Architekturentscheidungen entschieden:
 
 - Die **siebte Schicht** ist die separate Datenbank zur Datensicherung, die für die Speicherung der Ergebnisse aus den API-Schnittstellen und der CO2-Messdaten verwendet wird. Schließlich ist die achte Schicht der Dokumentendruck, der die Ergebnisse der Fahrtzeugsimulation ausgibt und die CO2-Messdaten zur separaten Datensicherung an die Datenbank sendet.
 
-##### Insgesamt ermöglicht diese Architektur eine klare Trennung der Verantwortlichkeiten und eine effiziente Handhabung der Fahrzeugkonfigurations-Daten, wodurch ein reibungsloser Workflow gewährleistet wird.
+**Insgesamt ermöglicht diese Architektur eine klare Trennung der Verantwortlichkeiten und eine effiziente Handhabung der Fahrzeugkonfigurations-Daten, wodurch ein reibungsloser Workflow gewährleistet wird.**
 
-# Qualitätsanforderungen
+# <a name='Qualitätsanforderungen'></a>Qualitätsanforderungen
 
-Anforderungen für unsere Architektur:
+### <a name='AnforderungenandieArchitektur:'></a>Anforderungen an die Architektur:
 
-- Leistungsfähigkeit
+- **Leistungsfähigkeit**
   - Schnelle und effiziente Verarbeitung von Fahrzeugkonfigurations-Daten
   - Schnelle und effiziente Verarbeitung von CO2-Messdaten
-- Skalierbarkeit
+- **Skalierbarkeit**
   - Möglichkeit zur Skalierung der Architektur, um eine steigende Anzahl von Anfragen zu bewältigen
-- Sicherheit
+- **Sicherheit**
   - Sichere Übertragung von Fahrzeugkonfigurations-Daten zwischen den Schichten
   - Sichere Authentifizierung und Überprüfung von Benutzerrechten
   - Schutz der Daten in der externen Datenbank und der separaten Datenbank zur Datensicherung
-- Zuverlässigkeit
+- **Zuverlässigkeit**
   - Zuverlässige Verarbeitung von Fahrzeugkonfigurations-Daten und CO2-Messdaten
   - Minimierung von Ausfallzeiten durch den Einsatz von redundanter Hardware und Software
-- Wartbarkeit
+- **Wartbarkeit**
   - Einfache Wartung und Aktualisierung der Architektur und ihrer Komponenten
   - Einfache Integration von neuen Funktionen und Schnittstellen
-- Benutzerfreundlichkeit
+- **Benutzerfreundlichkeit**
   - Einfache Handhabung und Bedienung der Architektur für die Anwender
   - Konsistente und verständliche Benutzeroberfläche für die Dokumentendruck-Schnittstelle und das Kombinations-Tool
-- Portabilität
+- **Portabilität**
   - Möglichkeit zur Portierung der Architektur auf verschiedene Plattformen und Betriebssysteme
-- Kompatibilität
+- **Kompatibilität**
   - Kompatibilität mit verschiedenen Fahrzeugtypen und -modellen
   - Kompatibilität mit verschiedenen Tools und Bibliotheken, einschließlich der Vecto Library
 
-## Qualitätsbaum
+# <a name='Qualittsbaum'></a>Qualitätsbaum
 
 ![Qualitätsbaum](images/Critical-to-quality-tree.png)_Qualitätsbaum_
 
-## Qualitätsszenarien
+# <a name='Qualitätsszenarien'></a>Qualitätsszenarien
 
-# Herausforderungen und Problemstellung
+## <a name='HerausforderungenundProblemstellung'></a>Herausforderungen und Problemstellung
 
 - Die Zusammensetzung der einzelnen Schnittstellen hat sich als sehr komplex herausgestellt, da die Daten von einer Schnittstelle an die nächste weitergeleitet werden müssen und diese wiederum die Daten an die nächste Schnittstelle weiterleiten müssen.
 - Die Authentifizierung der Daten muss in einer externen Datenbank erfolgen, da diese Datenbank nicht Teil der Anwendung ist.
 - Das gewählte Architekturmodell aus der Theorie in die Praxis umzusetzen war aufgrund mangelnder Erfahrung mit der Architektur sehr schwierig.
 - Die einbindung der Http-Requests in die Anwendung war sehr komplex, da wir uns mit der Architektur noch nicht ausreichend vertraut gemacht hatten.
 - Wir haben grundlegend erkannt das unsere kenntnisse in Java sowie der Architektur nicht ausreichend waren um die Anforderungen zu erfüllen.
-
-# Glossar
-
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Begriff</th>
-<th style="text-align: left;">Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><p><em>&lt;Begriff-1&gt;</em></p></td>
-<td style="text-align: left;"><p><em>&lt;Definition-1&gt;</em></p></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><p><em>&lt;Begriff-2</em></p></td>
-<td style="text-align: left;"><p><em>&lt;Definition-2&gt;</em></p></td>
-</tr>
-</tbody>
-</table>
