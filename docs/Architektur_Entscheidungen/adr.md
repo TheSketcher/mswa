@@ -11,6 +11,7 @@ Einige dieser Probleme können technischer Natur sein, wie beispielsweise Konfli
 - 1. [Entscheidung 1.0](#Entscheidung1.0)
   - 1.1. [Threading zur Performanceverbesserung / Designentscheidung Johannes Wittwer](#ThreadingzurPerformanceverbesserungDesignentscheidungJohannesWittwer)
   - 1.2. [Einheitliche & Standardisierte Struktur des Projektes durch die Verwendung von Maven / Christopher Caspari](#EinheitlicheStandardisierteStrukturdesProjektesdurchdieVerwendungvonMavenChristopherCaspari)
+  - 1.3. [Verwendung von Docker Containern / Lukas Gabriel](#VerwendungvonDockerContainernLukasGabriel)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -27,5 +28,9 @@ Im Kontext der Nutzung der verschiedenen Schnittstellen, sind wir dem Problem de
 ### 1.2. <a name='EinheitlicheStandardisierteStrukturdesProjektesdurchdieVerwendungvonMavenChristopherCaspari'></a>Einheitliche & Standardisierte Struktur des Projektes durch die Verwendung von Maven / Christopher Caspari
 
 Durch die Verwendung von Maven wird die Projektstruktur automatisch erstellt und die Verzeichnisse werden entsprechend der Standard-Konventionen benannt. Dadurch kann eine bessere Lesbarkeit und Wartbarkeit des Codes und die Zusammenarbeit mit anderen Entwicklern erleichtert werden. Maven kann darüber hinaus auch genutzt werden, um Abhängigkeiten zu verwalten anhand einer "pom.xml"-Datei welche die einzelnen Abhängigkeiten gliedert, Build-Prozesse automatisieren und ausführbare Artefakte erstellen. Das kann dazu beitragen, die Effizienz und Qualität der Entwicklung zu verbessern.
+
+### 1.3. <a name='VerwendungvonDockerContainernLukasGabriel'></a>Verwendung von Docker Containern / Lukas Gabriel
+
+Die Architektur soll in der Lage sein, eine steigende Anzahl von Anfragen zu bewältigen. Um dies zu erreichen, ist es sinnvoll, die Architektur durch Verwendung von Docker-Containern zu skalieren. Docker ist eine Plattform zur Entwicklung, Bereitstellung und Ausführung von Anwendungen in Containern, die eine schnelle Bereitstellung und Skalierung von Anwendungen ermöglicht. Durch die Verwendung von Docker-Containern kann die Architektur schnell und einfach auf verschiedene Umgebungen und Plattformen portiert werden. Zudem kann durch die Verwendung von Containern eine höhere Ausfallsicherheit erreicht werden, da bei einem Ausfall eines Containers nur dieser betroffen ist und nicht die gesamte Anwendung.
 
 [def]: #fortlaufenden-nummer
