@@ -16,7 +16,7 @@ public class Co2SimulationsProcess {
 
     public Co2SimulationsProcess(final VehicleWeightsClient weightsAccess,final Simulator simulator){
         this.weightsAccess = weightsAccess;
-        this.simulator=simulator;
+        this.simulator = simulator;
     }
     public ElectricVehicleSimulationResult simulateVehicle(final FullVehicle vehicle) throws IncompleteVehicleException, WrongVehicleClassException {
         VehicleInput input = getInputForVehicle(vehicle);

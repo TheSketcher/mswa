@@ -92,95 +92,15 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 
 # Lösungsstrategie
 
-# Bausteinsicht
-
-## Whitebox Gesamtsystem
-
-**_&lt;Übersichtsdiagramm>_**
-
-Begründung  
-_&lt;Erläuternder Text>_
-
-Enthaltene Bausteine  
-_&lt;Beschreibung der enthaltenen Bausteine (Blackboxen)>_
-
-Wichtige Schnittstellen  
-_&lt;Beschreibung wichtiger Schnittstellen>_
-
-### &lt;Name Blackbox 1>
-
-_&lt;Zweck/Verantwortung>_
-
-_&lt;Schnittstelle(n)>_
-
-_&lt;(Optional) Qualitäts-/Leistungsmerkmale>_
-
-_&lt;(Optional) Ablageort/Datei(en)>_
-
-_&lt;(Optional) Erfüllte Anforderungen>_
-
-_&lt;(optional) Offene Punkte/Probleme/Risiken>_
-
-### &lt;Name Blackbox 2>
-
-_&lt;Blackbox-Template>_
-
-### &lt;Name Blackbox n>
-
-_&lt;Blackbox-Template>_
-
-### &lt;Name Schnittstelle 1>
-
-…
-
-### &lt;Name Schnittstelle m>
-
-## Ebene 2
-
-### Whitebox _&lt;Baustein 1>_
-
-_&lt;Whitebox-Template>_
-
-### Whitebox _&lt;Baustein 2>_
-
-_&lt;Whitebox-Template>_
-
-…
-
-### Whitebox _&lt;Baustein m>_
-
-_&lt;Whitebox-Template>_
-
-## Ebene 3
-
-### Whitebox &lt;\_Baustein x.1\_&gt;
-
-_&lt;Whitebox-Template>_
-
-### Whitebox &lt;\_Baustein x.2\_&gt;
-
-_&lt;Whitebox-Template>_
-
-### Whitebox &lt;\_Baustein y.1\_&gt;
-
-_&lt;Whitebox-Template>_
-
 # Laufzeitsicht
 
-## _&lt;Bezeichnung Laufzeitszenario 1>_
-
-- &lt;hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
-
-- &lt;hier Besonderheiten bei dem Zusammenspiel der Bausteine in
-  diesem Szenario erläutern>
-
-## _&lt;Bezeichnung Laufzeitszenario 2>_
-
-…
-
-## _&lt;Bezeichnung Laufzeitszenario n>_
-
-…
+- Wir haben eine Dokumentendruck Schnittstelle von der Fahrzeugkonfigurations-Daten an unsere zentrale Verwaltungsschnittstelle gesendet werden.
+- Diese zentrale Verwaltungsschnittstelle hat eine eigenes Web-Interface wo die Anfrage der zugesendeten Daten ankommen, diese sendet an eine Security-Komponente eine Authentifizierungsanfrage wohingegen diese Security-Komponente in einer Datenbank außerhalb die authentifikation abfragt.
+- Sobald die Authentifizierung erfolgreich war, wird anhand einer **isAuthenticated()** Methode an das Web-Interface gemeldet das die Anfrage akzeptiert wurde und die Daten weitergeleitet werden können.
+- Darauf hin wird die Anfrage an einen Scheduler weitergeleitet, welcher die Fahrzeugkonfigurations-Daten entgegennimmt und diese an 2 weiter API-Schnittstellen weiterleitet, die Fahrzeugentwicklung sowie die Logistik.
+- Beide API´s verwenden die Fahrzeugkonfigurations-Daten um zum einen benötigte Messdaten zu der Konfiguration zu ergänzen und zum anderen benötigte Gewichtsangaben und Abmessung zum Fahrzeug beizufügen.
+- Nach dem hinzufügen der Daten zur Fahrzeugkonfiguration wird jeweils das fertige Ergebnis der API´s an eine separate Datenbank zur Datensicherung geschickt und gleizeitig auch wieder als Response zum Scheduler, welcher sich in unserer Verwaltungs-Schnittstelle befindet.
+- Nachdem der Scheduler eine Antwort von den API-Schnittstellen erhält, wird er die Weiterleitung an ein Kombinations-Tool initiieren. Das Kombinations-Tool wird die gesamten Daten zur Verfügung stellen, um eine Vecto Library zu vervollständigen. Anschließend wird eine Fahrtzeugsimulation berechnet, die CO2-Messdaten ausgibt. Diese Ergebnisse werden zur Datensicherung an die separate Datenbank gesendet und zeitgleich an den Absender der ursprünglichen Anfrage zurückgeschickt inklusive eines aktuelle Zeitstempels der berechneten Simulation, um den Dokumentendruck zu starten.
 
 # Verteilungssicht
 
@@ -230,6 +150,24 @@ _&lt;Erklärung>_
 _&lt;Erklärung>_
 
 # Architekturentscheidungen
+
+Wir haben uns für die folgenden Architekturentscheidungen entschieden:
+
+- **Ein Verteiltes System welches sich aus mehreren Schichten zusammensetzt.**
+
+####Beschreibung der Architektur:
+
+Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Schicht** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
+
+Die zentrale Verwaltungsschnittstelle stellt die **zweite Schicht** dar und dient als zentraler Punkt für die Authentifizierung und Weiterleitung von Anfragen.
+
+Die **dritte Schicht** ist die Security-Komponente, die in einer externen Datenbank die Authentifizierung überprüft. Die **vierte Schicht** ist der Scheduler, der die Aufgabe hat, die Fahrzeugkonfigurations-Daten an die API-Schnittstellen der Fahrzeugentwicklung und Logistik weiterzuleiten.
+
+Die **fünfte Schicht** besteht aus den API-Schnittstellen, die die benötigten Messdaten zur Fahrzeugkonfiguration hinzufügen und die Ergebnisse an die separate Datenbank zur Datensicherung zurücksenden. Die **sechste Schicht** ist das Kombinations-Tool, das die Daten für die Vecto Library vervollständigt und die Fahrtzeugsimulation berechnet.
+
+Die **siebte Schicht** ist die separate Datenbank zur Datensicherung, die für die Speicherung der Ergebnisse aus den API-Schnittstellen und der CO2-Messdaten verwendet wird. Schließlich ist die achte Schicht der Dokumentendruck, der die Ergebnisse der Fahrtzeugsimulation ausgibt und die CO2-Messdaten zur separaten Datensicherung an die Datenbank sendet.
+
+Insgesamt ermöglicht diese Architektur eine klare Trennung der Verantwortlichkeiten und eine effiziente Handhabung der Fahrzeugkonfigurations-Daten, wodurch ein reibungsloser Workflow gewährleistet wird.
 
 # Qualitätsanforderungen
 
