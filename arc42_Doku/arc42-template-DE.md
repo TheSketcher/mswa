@@ -155,7 +155,7 @@ Wir haben uns für die folgenden Architekturentscheidungen entschieden:
 
 - **Ein Verteiltes System welches sich aus mehreren Schichten zusammensetzt.**
 
-####Beschreibung der Architektur:
+#### Beschreibung der Architektur:
 
 Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Schicht** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
 
@@ -171,12 +171,35 @@ Insgesamt ermöglicht diese Architektur eine klare Trennung der Verantwortlichke
 
 # Qualitätsanforderungen
 
-**Weiterführende Informationen**
+Anforderungen für unsere Architektur:
 
-Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in
-der online-Dokumentation (auf Englisch!).
+- Leistungsfähigkeit
+  - Schnelle und effiziente Verarbeitung von Fahrzeugkonfigurations-Daten
+  - Schnelle und effiziente Verarbeitung von CO2-Messdaten
+- Skalierbarkeit
+  - Möglichkeit zur Skalierung der Architektur, um eine steigende Anzahl von Anfragen zu bewältigen
+- Sicherheit
+  - Sichere Übertragung von Fahrzeugkonfigurations-Daten zwischen den Schichten
+  - Sichere Authentifizierung und Überprüfung von Benutzerrechten
+  - Schutz der Daten in der externen Datenbank und der separaten Datenbank zur Datensicherung
+- Zuverlässigkeit
+  - Zuverlässige Verarbeitung von Fahrzeugkonfigurations-Daten und CO2-Messdaten
+  - Minimierung von Ausfallzeiten durch den Einsatz von redundanter Hardware und Software
+- Wartbarkeit
+  - Einfache Wartung und Aktualisierung der Architektur und ihrer Komponenten
+  - Einfache Integration von neuen Funktionen und Schnittstellen
+- Benutzerfreundlichkeit
+  - Einfache Handhabung und Bedienung der Architektur für die Anwender
+  - Konsistente und verständliche Benutzeroberfläche für die Dokumentendruck-Schnittstelle und das Kombinations-Tool
+- Portabilität
+  - Möglichkeit zur Portierung der Architektur auf verschiedene Plattformen und Betriebssysteme
+- Kompatibilität
+  - Kompatibilität mit verschiedenen Fahrzeugtypen und -modellen
+  - Kompatibilität mit verschiedenen Tools und Bibliotheken, einschließlich der Vecto Library
 
 ## Qualitätsbaum
+
+![Qualitätsbaum](images/Critical-to-quality-tree.png)_Qualitätsbaum_
 
 ## Qualitätsszenarien
 
