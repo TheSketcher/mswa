@@ -6,9 +6,15 @@ import de.dhbw.ka.se2.vecto4j.WrongVehicleClassException;
 import de.dhbw.ka.se2.vecto4j.input.VehicleInput;
 import de.dhbw.ka.se2.vecto4j.input.VehicleType;
 import de.dhbw.ka.se2.vecto4j.output.ElectricVehicleSimulationResult;
+import main.java.logistic.VehicleWeights;
 import main.java.logistic.VehicleWeightsClient;
 import main.java.print.FullVehicle;
 import main.java.print.VehicleConfiguration;
+import main.java.vehicle.VehicleComponent;
+import main.java.vehicle.VehicleComponentDecoder;
+import main.java.vehicle.VehicleDataClient;
+
+import java.util.List;
 
 public class Co2SimulationsProcess {
     private final VehicleWeightsClient weightsAccess;
@@ -37,10 +43,13 @@ public class Co2SimulationsProcess {
                 throw new IllegalArgumentException("Unknown type " + vehicle.getMetadata().getType());
     }
     private void enrichInputWithComponents(final VehicleConfiguration config, final VehicleInput input){
-
+        List<VehicleComponent> components = new VehicleDataClient().getComponents(config);
+        new VehicleComponentDecoder().decodeAndAddComponents(components, input);
     }
     private void enrichInputWithWeights(final VehicleConfiguration config, final VehicleInput input){
-
+        VehicleWeights weights=weightsAccess.getWeights(config);
+        input.setMaxPermissibleWeight(weights.getMaxPermissibleWeight());
+        input.setWeight(weights.getWeight());
     }
 
 }
