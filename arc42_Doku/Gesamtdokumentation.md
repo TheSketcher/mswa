@@ -103,9 +103,9 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 
 ## <a name='TechnischerKontext'></a>Technischer Kontext
 
-![Level 2 Content-Diagramm zur Darstellung der inneren Struktur der eigenen Schnittstelle / Software.](images/C4_Model_Dynamic_Diagram_for_API_Application.png)_Content Diagramm zur Darstellung der eigenen Anwendung und der internen Struktur._
+![Level 2 & Level 3 Content-Diagramm zur Darstellung der inneren Struktur der eigenen Schnittstelle / Software.](images/C4_Model_Dynamic_Diagram_for_API_Application.png)_Content Diagramm zur Darstellung der eigenen Anwendung und der internen Struktur._
 
-# <a name='Laufzeitschicht'></a>Laufzeitsicht
+# <a name='Laufzeitsicht'></a>Laufzeitsicht
 
 - Wir haben eine Dokumentendruck Schnittstelle von der Fahrzeugkonfigurations-Daten an unsere zentrale Verwaltungsschnittstelle gesendet werden.
 - Diese zentrale Verwaltungsschnittstelle hat eine eigenes Web-Interface wo die Anfrage der zugesendeten Daten ankommen, diese sendet an eine Security-Komponente eine Authentifizierungsanfrage wohingegen diese Security-Komponente in einer Datenbank außerhalb die authentifikation abfragt.
@@ -119,19 +119,19 @@ Die Rahmenbedingungen für das Projekt sind die folgenden:
 
 Wir haben uns für die folgenden Architekturentscheidungen entschieden:
 
-- **Ein Verteiltes System welches sich aus mehreren Schichten zusammensetzt.**
+- **Ein Verteiltes System welches sich aus mehreren Komponenten zusammensetzt.**
 
 ### <a name='BeschreibungderArchitektur:'></a>Beschreibung der Architektur:
 
-- Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Schicht** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
+- Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Komponente** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
 
-- Die zentrale Verwaltungsschnittstelle stellt die **zweite Schicht** dar und dient als zentraler Punkt für die Authentifizierung und Weiterleitung von Anfragen.
+- Die zentrale Verwaltungsschnittstelle stellt die **zweite Komponente** dar und dient als zentraler Punkt für die Authentifizierung und Weiterleitung von Anfragen.
 
-- Die **dritte Schicht** ist die Security-Komponente, die in einer externen Datenbank die Authentifizierung überprüft. Die **vierte Schicht** ist der Scheduler, der die Aufgabe hat, die Fahrzeugkonfigurations-Daten an die API-Schnittstellen der Fahrzeugentwicklung und Logistik weiterzuleiten.
+- Die **dritte Komponente** ist die Security-Komponente, die in einer externen Datenbank die Authentifizierung überprüft. Die **vierte Komponente** ist der Scheduler, der die Aufgabe hat, die Fahrzeugkonfigurations-Daten an die API-Schnittstellen der Fahrzeugentwicklung und Logistik weiterzuleiten.
 
-- Die **fünfte Schicht** besteht aus den API-Schnittstellen, die die benötigten Messdaten zur Fahrzeugkonfiguration hinzufügen und die Ergebnisse an die separate Datenbank zur Datensicherung zurücksenden. Die **sechste Schicht** ist das Kombinations-Tool, das die Daten für die Vecto Library vervollständigt und die Fahrtzeugsimulation berechnet.
+- Die **fünfte Komponente** besteht aus den API-Schnittstellen, die die benötigten Messdaten zur Fahrzeugkonfiguration hinzufügen und die Ergebnisse an die separate Datenbank zur Datensicherung zurücksenden. Die **sechste Komponente** ist das Kombinations-Tool, das die Daten für die Vecto Library vervollständigt und die Fahrtzeugsimulation berechnet.
 
-- Die **siebte Schicht** ist die separate Datenbank zur Datensicherung, die für die Speicherung der Ergebnisse aus den API-Schnittstellen und der CO2-Messdaten verwendet wird. Schließlich ist die achte Schicht der Dokumentendruck, der die Ergebnisse der Fahrtzeugsimulation ausgibt und die CO2-Messdaten zur separaten Datensicherung an die Datenbank sendet.
+- Die **siebte Komponente** ist die separate Datenbank zur Datensicherung, die für die Speicherung der Ergebnisse aus den API-Schnittstellen und der CO2-Messdaten verwendet wird. Schließlich ist die achte Schicht der Dokumentendruck, der die Ergebnisse der Fahrtzeugsimulation ausgibt und die CO2-Messdaten zur separaten Datensicherung an die Datenbank sendet.
 
 **Insgesamt ermöglicht diese Architektur eine klare Trennung der Verantwortlichkeiten und eine effiziente Handhabung der Fahrzeugkonfigurations-Daten, wodurch ein reibungsloser Workflow gewährleistet wird.**
 
