@@ -123,7 +123,7 @@ Wir haben uns für die folgenden Architekturentscheidungen entschieden:
 
 ### <a name='BeschreibungderArchitektur:'></a>Beschreibung der Architektur:
 
-- Die Architektur besteht aus mehreren Schichten mit klaren Verantwortlichkeiten. Die **erste Komponente** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
+- Die Architektur besteht aus mehreren Komponenten mit klaren Verantwortlichkeiten. Die **erste Komponente** ist die Dokumentendruck-Schnittstelle, die Fahrzeugkonfigurations-Daten an die zentrale Verwaltungsschnittstelle sendet.
 
 - Die zentrale Verwaltungsschnittstelle stellt die **zweite Komponente** dar und dient als zentraler Punkt für die Authentifizierung und Weiterleitung von Anfragen.
 
